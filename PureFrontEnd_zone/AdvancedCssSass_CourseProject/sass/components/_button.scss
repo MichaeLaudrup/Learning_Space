@@ -1,0 +1,92 @@
+
+.btn{
+    &::after {
+        content:""; 
+        display:inline-block; 
+        height: 100%; 
+        width: 100%;
+        border-radius: 6.25rem;
+        position: absolute;
+        top:0; 
+        left: 0;
+        z-index: -1; 
+        transition: all 0.4s; 
+    }
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black,.2);
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba($color-black,.2);
+    }
+
+    & ,&:link, &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 0.94rem 2.5rem; 
+        display:inline-block;
+        border-radius: 6.25rem;
+        transition: all 0.2s;
+        position:relative; 
+        font-size: 1.1rem;
+        border:none; 
+    }
+
+    &--white{
+        background-color: $color-white;
+        color:$color-gray-dark ; 
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+
+    &--green{
+        background-color: $color-primary;
+        color:$color-white ; 
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;  
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text{
+    &:link,
+    &:visited {
+        font-size: 1rem;
+        color: $color-primary; 
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding:6px; 
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white; 
+        box-shadow: 0  0.62rem 1.24rem rgba($color-black,.15);
+        transform: translateY(-2px);
+
+    }
+
+    &:active{
+        box-shadow: 0  0.31rem 0.62rem rgba($color-black,.15);
+        transform: translateY(0);
+    }
+}

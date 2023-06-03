@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 17px;
+}
+
+.form-container {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.form-itself {
+    width: 50%;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.form-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(226, 226, 250);
+    border-radius: 5px;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(133, 133, 233);
+    padding: .5rem 0;
+    border-radius: 5px;
+}
+
+.form-element {
+    position: relative;
+}
+
+.form-element input {
+    padding: 1rem .4rem .5rem .4rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+}
+
+.form-element input:not([type='checkbox']):focus {
+    width: 90%;
+}
+
+.form-element .normal-label {
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+    padding: .2rem .5rem;
+    transform-origin: 0%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 3px;
+}
+
+.form-element:hover input:not([type='checkbox'])+label {
+    top: 0%;
+    transform: scale(.85) translateY(-60%);
+    background-color: white;
+}
+
+.form-element label.label-up {
+    top: 0%;
+    transform: scale(.85) translateY(-60%);
+    background-color: white;
+}
+
+.form-element:hover input {
+    border-radius: 5px;
+}
+
+.form-element input[type="checkbox"] {
+    position: relative;
+}
+
+.form-element--checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form-element--checkbox input {
+    width: 5%;
+}
+
+.message-err-info {
+    position: absolute;
+    left: 1%;
+    top: 115%;
+    color: red;
+    transition: all .5s ease-in-out;
+    visibility: visible;
+}
+
+.btn-form {
+    padding: .25rem 1rem;
+}
+
+.display-none {
+    opacity: 0;
+    visibility: hidden;
+    top: 90%;
+}

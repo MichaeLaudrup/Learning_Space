@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *, *::after, *::before {padding: 0; margin: 0; box-sizing: border-box;}
+            body {position:relative;width: 100%;height: 100vh;background-image: linear-gradient( to bottom left,black, rgb(51, 51, 51));}
+            .progress-bar {
+                position:absolute;top:50%; transform: translate(-50%, -50%);left:calc(50%);
+                background-image: repeating-linear-gradient(to right,rgb(68, 40, 226) 0px, rgb(68, 40, 226) 70px, rgb(255, 255, 255) 70px, rgb(255, 255, 255) 75px);
+                width: 375px;
+                height: 100px;
+                margin: 0 auto;
+                border: 5px solid white;
+                animation: change_color 4s infinite; 
+            }
+            .progress-bar::after {
+                content: ""; 
+                display: block;
+                position:absolute; 
+                top:-5px;
+                right: -5px;
+                width: 0;
+                height: 100px;
+                background-color: rgb(255, 255, 255);
+                animation: fill_batery 4s infinite;
+            }
+
+            @keyframes fill_batery {
+                0%{ width: 100%;} 
+                20%{ width: 80%;}
+                40%{width: 60%;}
+                60%{ width: 40%;}
+                80%{width: 20%;}
+                100%{width: 0%;} 
+            }
+            @keyframes change_color {
+                0%{ background-image: repeating-linear-gradient(to right,rgb(226, 40, 40) , rgb(226, 40, 40) 70px, rgb(255, 255, 255) 70px, rgb(255, 255, 255) 75px);}
+                50%{ background-image: repeating-linear-gradient(to right,rgb(226, 40, 40) , rgb(226, 40, 40) 70px, rgb(255, 255, 255) 70px, rgb(255, 255, 255) 75px);}
+                100%{background-image: repeating-linear-gradient(to right,rgb(40, 226, 40) , rgb(40, 226, 40) 70px, rgb(255, 255, 255) 70px, rgb(255, 255, 255) 75px);}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="progress-bar"></div>
+    </body>
+</html>

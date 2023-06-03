@@ -1,0 +1,32 @@
+.pop-up__ubication{
+    background-color: #fff;
+    position: absolute;
+    top: 42vh; 
+    left:50vw; 
+    transform: translate(-50%, -50%);
+    z-index: 10000; 
+    max-width: 32%;
+    border-radius: 10px; 
+}
+
+.pop-up__ubication h2 {
+    padding:1rem 1rem 1.4rem 1.4rem; 
+    background-color: #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.instructions-1{
+    color:#888; 
+    padding: 1rem 1rem 1.4rem 1.4rem; 
+    line-height: 1.4;
+}
+
+.ubication__box:first-of-type {
+    padding-bottom: 0;
+}
+
+.ubication__box{
+    padding:2rem; 
+}

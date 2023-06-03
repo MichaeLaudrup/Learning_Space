@@ -1,0 +1,169 @@
+[{
+        "formConfiguration": {
+            "sections": [{
+                "title": "Datos básicos",
+                "ids_asociated": ["nombre", "segundo_nombre", "apellido", "birthday_date"]
+            }, {
+                "title": "Creación de cuenta online",
+                "ids_asociated": ["user_name", "email", "password", "repeat_password"]
+            }, {
+                "title": "Documentación a aportar",
+                "ids_asociated": ["docu", "button"]
+            }]
+        }
+    }, {
+        "HTMLElementName": "input",
+        "label": "Primer nombre",
+        "attributes": {
+            "id": "nombre",
+            "type": "text",
+            "minlenght": "3",
+            "required": true,
+            "pattern": "[A-Za-z]{3,}",
+            "aria-label": "Tu nombre"
+        },
+        "errorMessage": "Su nombre es necesario, debe introducir mínimo tres carácteres y no se admiten espacios"
+    },
+    {
+        "HTMLElementName": "input",
+        "label": "Segundo nombre",
+        "attributes": {
+            "id": "segundo_nombre",
+            "type": "text",
+            "pattern": "[A-Za-z]{0,}",
+            "aria-label": "Tu segundo nombre"
+        },
+        "errorMessage": "Evite los espacios, si tiene más de un segundo nombre no es necesario que lo indique"
+    },
+    {
+        "HTMLElementName": "input",
+        "attributes": {
+            "id": "apellido",
+            "type": "text",
+            "pattern": "[A-Za-z\\s]{3,}",
+            "required": "true",
+            "aria-label": "Tu apellido"
+        },
+        "label": "Apellido",
+        "errorMessage": "Este es un campo requerido, debe introducir mínimo tres carácteres"
+    },
+    {
+        "HTMLElementName": "input",
+        "attributes": {
+            "id": "user_name",
+            "type": "text",
+            "aria-label": "nick con el que quieres iniciar sesion"
+        },
+        "label": "Username"
+    },
+    {
+        "HTMLElementName": "input",
+        "attributes": {
+            "id": "password",
+            "type": "password",
+            "autocomplete": "false",
+            "aria-label": "tu contraseña"
+        },
+        "label": "Password"
+    },
+    {
+        "HTMLElementName": "input",
+        "attributes": {
+            "id": "repeat_password",
+            "type": "password",
+            "autocomplete": "false",
+            "aria-label": "Repite tu contraseña anteriormente puesta"
+        },
+        "label": "Repetir password"
+    },
+    {
+        "HTMLElementName": "input",
+        "attributes": {
+            "id": "birthday_date",
+            "type": "date",
+            "aria-label": "Tu fecha de nacimiento"
+        },
+        "label": "Tu cumpleaños"
+    },
+    {
+        "HTMLElementName": "input",
+        "attributes": {
+            "id": "docu",
+            "type": "checkbox"
+        },
+        "optionsList": ["Acta fundacional", "estatutos", "Justificante de abono de la tasa", "Personas jurídicas", "DNI"],
+        "label": "Documentos a aportar"
+    },
+    {
+        "HTMLElementName": "input",
+        "label": "Codigo postal",
+        "attributes": {
+            "id": "postal_code",
+            "type": "text",
+            "class": "code-postal",
+            "pattern": "[0-9]*",
+            "minlength": "5",
+            "aria-label": "tu código postal"
+        },
+        "errorMessage": "En España, el código postal tiene 5 dígitos mínimo."
+
+    }, {
+        "HTMLElementName": "button",
+        "attributes": {
+            "id": "button",
+            "type": "password",
+            "autocomplete": "false",
+            "class": "btn-form",
+            "aria-label": "Enviar formulario"
+        },
+        "textButton": "Submit",
+        "onclickFunction": "send(event)"
+    },
+    {
+        "HTMLElementName": "input",
+        "attributes": {
+            "id": "email",
+            "type": "email",
+            "required": "true",
+            "aria-label": "Tu email"
+
+        },
+        "label": "Email",
+        "errorMessage": "Introduzca un email válido. "
+    },
+    {
+        "HTMLElementName": "fieldset",
+        "legend": "Documentos que aporta: ",
+        "attributes": {
+            "id": "documents"
+        },
+        "nestedHTMLElements": [{
+                "HTMLElementName": "input",
+                "attributes": {
+                    "id": "docu1",
+                    "type": "checkbox",
+                    "value": "acta"
+                },
+                "label": "Acta fundacional"
+            },
+            {
+                "HTMLElementName": "input",
+                "attributes": {
+                    "id": "docu2",
+                    "type": "checkbox",
+                    "value": "estatutos"
+                },
+                "label": "Estatutos"
+            },
+            {
+                "HTMLElementName": "input",
+                "attributes": {
+                    "id": "docu3",
+                    "type": "textarea",
+                    "value": "otros"
+                },
+                "label": "Otros"
+            }
+        ]
+    }
+]

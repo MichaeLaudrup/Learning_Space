@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="just a web page">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <style>
+        @font-face{font-family:'Amazon Ember';font-weight:200;src:url(https://m.media-amazon.com/images/S/sash/Dv1WQ5DdeMS5qP7.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/e0LnMbFWJC-TMQz.woff) format("woff")}@font-face{font-family:'Amazon Ember';font-weight:200;font-style:italic;src:url(https://m.media-amazon.com/images/S/sash/ozb5-CLHQWI6Soc.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/twzZHebXjCHBb6v.woff) format("woff")}@font-face{font-family:'Amazon Ember';src:url(https://m.media-amazon.com/images/S/sash/pDxWAF1pBB0dzGB.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/kfKKBuoqcD$AUKL.woff) format("woff")}@font-face{font-family:'Amazon Ember';font-style:italic;src:url(https://m.media-amazon.com/images/S/sash/WOnTLzkiaEccV7F.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/JJsp0ZvgpfwzJM6.woff) format("woff")}@font-face{font-family:'Amazon Ember';font-weight:500;src:url(https://m.media-amazon.com/images/S/sash/VjTR4RqBzY0mUYx.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/XIvhNCZAsrT80Wz.woff) format("woff")}@font-face{font-family:'Amazon Ember';font-weight:500;font-style:italic;src:url(https://m.media-amazon.com/images/S/sash/KwhNPG8Jz-Vz2X7.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/YAEPfuhs1l-argd.woff) format("woff")}@font-face{font-family:'Amazon Ember';font-weight:700;src:url(https://m.media-amazon.com/images/S/sash/KFPk-9IF4FqAqY-.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/mzVbGSgvdBfRLX9.woff) format("woff")}@font-face{font-family:'Amazon Ember';font-style:italic;font-weight:700;src:url(https://m.media-amazon.com/images/S/sash/2SazJx$EeTHfhMN.woff2) format("woff2"),url(https://m.media-amazon.com/images/S/sash/CjbL$jCCegyfqZ7.woff) format("woff")}.a-ember body{font-family:"Amazon Ember",Arial,sans-serif}.a-ember .a-text-quote{font-family:"Amazon Ember",Arial,sans-serif}:root{--color-main-dark:#131921;--color-main:#232f3e;--color-main-light:#37475A}*{padding:0;margin:0;box-sizing:border-box}body{position:relative}html{font-size:14px;font-family:'Amazon ember',sans-serif;background-color:#eaeded}main{background-color:#eaeded;position:relative}.sleep-mode{height:100%;width:100%;background-color:rgba(0,0,0,0.5);position:absolute;top:0;z-index:9000;pointer-events:none;visibility:hidden;opacity:0;transition:all .5s}@media screen and (max-width: 990px){html{font-size:13px}}.row{display:flex}.header{max-width:100%;width:100vw;color:#fff}.header .row{list-style:none}.header__menu-item{display:none}.header__logo-img{width:9rem;height:auto}.header a:link,.hader a:visited{border:1px solid transparent;border-radius:2px}.header a:hover{border:1px solid #fff}.header__row-1{max-width:100vw;background-color:var(--color-main-dark);display:grid;grid-template-columns:repeat(2,max-content) 1fr repeat(4,max-content);align-items:center;padding-right:.75rem}.header__row-1 > li{padding:.5rem .4rem}.header__row-1 li{border:solid 1px transparent;border-radius:3px;cursor:pointer}.header__row-1 li:hover:not(:nth-of-type(3)){border:solid 1px #fff}.header__location{display:grid;grid-template-columns:max-content 1fr;grid-template-rows:1fr 1fr}.header__location span{grid-column:2}.header__location i{font-size:1.5rem;grid-row:1/3;align-self:flex-end}.title-minimized{font-size:.8rem;display:block}.title-minimized + span{font-weight:600}.header__search{display:grid;grid-template-columns:max-content 1fr min-content}.header__search select{border-bottom-left-radius:4px;border-top-left-radius:4px;font-size:.9rem;padding:1rem;background-color:#e9e9e9;max-width:200px}.header__search select:focus{outline:hidden;border:3px solid orange}.header__search .la-search{align-self:stretch;color:#000;padding:.8rem;padding-top:1rem;background-color:#febd69;font-weight:700;font-size:1.3rem;border-top-right-radius:4px;border-bottom-right-radius:4px}.header__language img{margin-top:10px;width:1.5rem}.header__acount{position:relative}.header__acount:hover + .sleep-mode{visibility:visible;opacity:1;transition:all .5s}.account-sub-menu{display:none}.account-sub-menu ul{list-style:none;min-width:250px;padding:1rem}.account-sub-menu ul:nth-of-type(1){border-right:solid 1px rgba(0,0,0,0.562)}.account-sub-menu ul:nth-of-type(2){border-right:solid 1px rgba(0,0,0,0.253)}.account-sub-menu .list-title{font-weight:700;font-size:1.25rem}.account-sub-menu a:link,.account-sub-menu a:visited{display:block;text-decoration:none;color:#181818;line-height:1.75}.header__acount:hover .account-sub-menu{background-color:#fff;display:flex;position:absolute;top:100%;right:-100%;z-index:10000;border-radius:5px}.header__acount:hover .account-sub-menu::before{content:"";position:absolute;top:-4%;right:15%;border:solid 13px;border-color:transparent transparent #fff;z-index:250000}.header__shopping-cart span{font-weight:700}.header__shopping-cart i{font-size:3rem;position:relative}.header__shopping-cart i::after{content:"0";display:inline-block;text-align:center;font-size:1.3rem;padding:.25rem;background-color:var(--color-main-dark);color:orange;font-weight:700;position:absolute;left:50%;transform:translateX(-40%);z-index:1}.header__row-2{background-color:var(--color-main);padding:.4rem;font-size:1.1rem;display:flex;flex-wrap:wrap;max-height:39px;overflow:hidden;align-items:center}.header__row-2 li a:link,.header__row-2 li a:visited{display:inline-block;text-decoration:none;color:#fff;padding:.3rem .5rem}.menu-item{margin-right:4px;position:relative;top:50%;transform:translateY(-50%);height:3px;width:15px;background-color:#fff;display:inline-block}.menu-item::after,.menu-item::before{content:"";display:block;height:2.5px;width:15px;position:absolute;background-color:#fff}.menu-item::after{top:-200%}.menu-item::before{bottom:-200%}.nav-icon{padding:0 1rem;display:none;font-size:2rem}@media screen and (max-width: 990px){.nav-icon{display:block}.header__menu-item{display:block}.header__row-1{grid-template-columns:max-content 1fr max-content max-content;align-items:center;width:100%}.header__menu-item{font-size:2rem;padding:1rem}.header__location,.header__sells,.header__language{display:none}.header__logo{grid-column:2;align-self:center}.header__search{grid-column:1/-1}.header__acount{grid-column:3/4;grid-row:1/2}.header__shopping-cart{grid-column:4/5;grid-row:1/2}.account-sub-menu{display:none!important}}
+        .carrousel{width:100%;max-width:1500px;margin:0 auto;overflow:hidden;position:relative}.slider-headband{display:flex;transition:transform .5s ease-in-out}.slider{flex:1 0 100%;cursor:pointer}.carrousel img{display:block;width:100%;height:auto}.navigation-arrow{position:absolute;color:#fff;z-index:1;font-size:4rem;display:inline-block;height:41.5%;display:flex;align-items:center;cursor:pointer;border:2px solid transparent}.navigation-arrow:active{border-radius:3px;outline:none;border:2px solid #fff}.navigation-to-right{right:0}.slider-1-active{transform:translateX(0%)}.slider-2-active{transform:translateX(-100%)}.slider-3-active{transform:translateX(-200%)}.shop{position:relative;z-index:1000;width:100%;max-width:1500px;margin:0 auto;display:grid;grid-template-columns:repeat();background-image:linear-gradient(transparent 0%,#eaeded 11%);grid-template-columns:repeat(auto-fill,minmax(24%,1fr));grid-gap:1rem;padding:1rem;margin-top:-18%}.shop__item{background-color:#fff;padding:1rem;position:relative;display:flex;flex-direction:column}.heading-tertiary{margin-bottom:1rem;font-size:1.4rem}.shop__item img{width:100%}.galley-4-items{display:grid;grid-template-columns:1fr 1fr;grid-column-gap:1rem}.shop__item-3{display:flex}.shop__item-3 img{width:80%;display:block;align-self:center}.shop__item-4{align-self:start}.shop__item-5{grid-column:1/3;grid-row:2/3;background-image:url(../img/primevideo.jpg),linear-gradient(black,transparent,black);background-size:cover;background-position-x:center;color:#fff;min-height:250px}.box-link:link,.box-link:visited{color:#007185;text-decoration:none;position:relative;margin-top:auto;padding-top:1.5rem;*margin-top:.2rem}.box-link:hover,.box-link:active{text-decoration:underline}@media screen and (max-width: 767px){.shop{grid-template-columns:repeat(auto-fill,minmax(50%,1fr))}}@media screen and (max-width: 479px){.shop{grid-template-columns:repeat(auto-fill,minmax(100%,1fr))}.shop__item-5{grid-column:1/2}}.horizontalNavigation{background-color:#fff;width:100%;max-width:1500px;margin:1rem auto;grid-column:1/-1;padding:1rem}.outer-wrapper{max-width:100vw;overflow-x:scroll;position:relative;scrollbar-color:#d5ac68 #f1db9d;scrollbar-width:thin;-ms-overflow-style:none}.pseduo-track{background-color:#f1db9d;height:2px;width:100%;position:relative;top:-3px;z-index:-10}@media (any-hover: none){.pseduo-track{display:none}}.outer-wrapper::-webkit-scrollbar{height:5px}.outer-wrapper::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 0 rgba(0,0,0,0)}.outer-wrapper::-webkit-scrollbar-thumb{height:5px;background-color:#d5ac68}.outer-wrapper::-webkit-scrollbar-thumb:hover{background-color:#f1db9d}.outer-wrapper::-webkit-scrollbar:vertical{display:none}.inner-wrapper{display:flex;padding-bottom:10px;gap:1.25rem}.pseudo-item{height:200px;width:200px;flex-shrink:0;background-color:#fff;display:flex;align-items:center;justify-content:center}.go-up{display:block;text-align:center;background-color:var(--color-main-light);color:#fff;padding:1rem;text-decoration:none}.go-up:hover{background-color:#485769}footer{background-color:var(--color-main)}.footer-navigation,.footer-navigation2{margin:0 auto;padding:2.5rem;display:flex;max-width:1000px;justify-content:space-between}.footer-navigation ul{list-style:none}.footer-navigation li:not(:last-child){margin-bottom:1rem}.footer-navigation li:hover a,.footer-navigation li:active a,.footer-navigation2 li:hover a,.footer-navigation2 li:active a{text-decoration:underline}.footer-navigation .list-title{font-weight:700}.footer-navigation a:link,.footer-navigation a:visited,.footer-navigation2 a:link,.footer-navigation2 a:visited{color:#fff;text-decoration:none}.footer-navigation2{display:flex;list-style:none;flex-wrap:wrap;justify-content:center;gap:.75rem;padding-top:.25rem}footer hr{border:.5px solid rgba(255,255,255,0.335)}.countries{text-align:center;padding:2rem}.countries img{width:100px}@media screen and (max-width:990px){.footer-navigation{flex-direction:column;align-items:center;text-align:center;gap:4rem}}.special-menu{opacity:0;visibility:hidden;pointer-events:none;position:absolute;background-color:#fff;width:365px;top:0;left:0;height:100vh;z-index:10000;transform:translateX(-100%)}.nav__list-of-list{overflow-y:scroll;max-height:90%}.nav-icon{position:relative;z-index:10001}.special-menu-open{opacity:1;visibility:visible;pointer-events:visible;transform:translateX(0%);transition:all .5s}.menu-welcome{position:relative;color:#fff;font-size:1.7rem;font-weight:700;text-align:center;padding:2rem 0 1rem;background-color:var(--color-main)}.menu-welcome .close{position:absolute;right:2%;top:6%;font-size:2rem}.nav__list{list-style:none;border-bottom:1px solid rgba(0,0,0,0.205)}.nav__list li{display:block;border-radius:0;padding:.75rem 2rem .75rem 3.5rem;font-size:1.1rem;color:#333}.nav__list span{font-size:1.4rem;color:#000;font-weight:700}.nav__list a:link,.nav__list a:visited{text-decoration:none;color:inherit}.shadow[on="true"]{position:absolute;background-color:rgba(0,0,0,0.712);height:100%;width:100%;display:block;top:0;left:0;z-index:9999;transition:all .5s ease-in-out}
+    </style>
+</head>
+<body>
+    <header class="header" id="top">
+        <nav>
+            <ul class="row header__row-1">
+                
+                <input id="special-menu-check" type="checkbox" style="display: none;">
+                <i class="las la-bars nav-icon" onclick="showSpecialMenu()"></i>   
+                <li class="header__logo">
+                    <picture>
+                        <img class="header__logo-img" src="./img/amazon_dark.png" alt="">
+                    </picture>
+                </li>
+                <li class="header__location">
+                    <i class="las la-map-marker-alt"></i>
+                    <span class="title-minimized">Enviar a Michael</span>
+                    <span>Valencia 46021</span>
+                </li>
+    
+                <li class="header__search">
+                    <select name="cars" id="cars">
+                        <option selected="selected" value="search-alias=aps">Todos los departamentos</option>
+                        <option value="search-alias=alexa-skills">Alexa Skills</option>
+                        <option value="search-alias=grocery">Alimentación y bebidas</option>
+                        <option value="search-alias=amazon-global-store">Amazon Global Store</option>
+                        <option value="search-alias=warehouse-deals">Amazon Warehouse</option>
+                        <option value="search-alias=mobile-apps">Appstore para Android</option>
+                        <option value="search-alias=audible">Audible audiolibros y podcasts exclusivos</option>
+                        <option value="search-alias=baby">Bebé</option>
+                        <option value="search-alias=beauty">Belleza</option>
+                        <option value="search-alias=diy">Bricolaje y herramientas</option>
+                        <option value="search-alias=gift-cards">Cheques regalo</option>
+                        <option value="search-alias=automotive">Coche y Moto - Piezas y accesorios</option>
+                        <option value="search-alias=sporting">Deportes y aire libre</option>
+                        <option value="search-alias=dia">DIA</option>
+                        <option value="search-alias=amazon-devices">Dispositivos de Amazon</option>
+                        <option value="search-alias=electronics">Electrónica</option>
+                        <option value="search-alias=luggage">Equipaje</option>
+                        <option value="search-alias=appliances">Grandes electrodomésticos</option>
+                        <option value="search-alias=handmade">Handmade</option>
+                        <option value="search-alias=kitchen">Hogar y cocina</option>
+                        <option value="search-alias=lighting">Iluminación</option>
+                        <option value="search-alias=industrial">Industria y ciencia</option>
+                        <option value="search-alias=computers">Informática</option>
+                        <option value="search-alias=mi">Instrumentos musicales</option>
+                        <option value="search-alias=lawngarden">Jardín</option>
+                        <option value="search-alias=jewelry">Joyería</option>
+                        <option value="search-alias=toys">Juguetes y juegos</option>
+                        <option value="search-alias=stripbooks">Libros</option>
+                        <option value="search-alias=under-ten-dollars">Menos de 10€</option>
+                        <option value="search-alias=fashion">Moda</option>
+                        <option value="search-alias=digital-music">Música Digital</option>
+                        <option value="search-alias=popular">Música: CDs y vinilos</option>
+                        <option value="search-alias=office-products">Oficina y papelería</option>
+                        <option value="search-alias=dvd">Películas y TV</option>
+                        <option value="search-alias=instant-video">Prime Video</option>
+                        <option value="search-alias=pets">Productos para mascotas</option>
+                        <option value="search-alias=watches">Relojes</option>
+                        <option value="search-alias=apparel">Ropa y accesorios</option>
+                        <option value="search-alias=hpc">Salud y cuidado personal</option>
+                        <option value="search-alias=software">Software</option>
+                        <option value="search-alias=specialty-aps-sns">Suscríbete y Ahorra</option>
+                        <option value="search-alias=digital-text">Tienda Kindle</option>
+                        <option value="search-alias=videogames">Videojuegos</option>
+                        <option value="search-alias=shoes">Zapatos y complementos</option>
+                      </select>
+                    <input type="text" aria-label="select">
+                    <i class="las la-search"></i>
+                </li>
+    
+                <li class="header__language">
+                    <img src="./img/spain_flag.png" alt="">
+                    <i class="las la-caret-down"></i>
+                </li>
+    
+                <li class="header__acount">
+                    <span class="title-minimized">Hola Maikel</span>
+                    <span>Cuenta y listas</span>
+                    <i class="las la-caret-down"></i> 
+                    <nav class="account-sub-menu">
+                        <ul>
+                            <li><a class="list-title" href="#">Comprarlo de nuevo</a></li>
+                            <li>Ver todos y gestionar</li>
+                        </ul>
+                        <ul>
+                            <li><a class="list-title" href="#">Mis listas</a></li>
+                            <li><a href="#">Crear una lista de deseos</a></li>
+                            <li><a href="#">Lista de deseos universal</a></li>
+                            <li><a href="#">Lista de bodas</a></li>
+                            <li><a href="#">Lista de Nacimiento</a></li>
+                            <li><a href="#">Kids' Wish List</a></li>
+                            <li><a href="#">Descubre tu estilo</a></li>
+                            <li><a href="#">Explorar Showroom</a></li>
+                        </ul>
+            
+                        <ul>
+                            <li><a href="#" class="list-title">Mi cuenta</a></li>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="#">Mis pedidos</a></li>
+                            <li><a href="#">Mi Lista de deseos</a></li>
+                            <li><a href="#">Mis recomendaciones</a></li>
+                            <li><a href="#">Mis mascotas</a></li>
+                            <li><a href="#">Pertenencia a programas y suscripciones</a></li>
+                            <li><a href="#">Mi suscripción a Amazon Prime</a></li>
+                            <li><a href="#">Mis suscripciones a productos</a></li>
+                            <li><a href="#">Hazte una cuenta Amazon Business</a></li>
+                            <li><a href="#">Gestionar contenido y dispositivos</a></li>
+                            <li><a href="#">Mi Kindle Unlimited</a></li>
+                            <li><a href="#">Mi Biblioteca musical</a></li>
+                            <li><a href="#">Mi Prime Video</a></li>
+                            <li><a href="#">Mi Amazon Drive</a></li>
+                            <li><a href="#">Mis Apps y dispositivos</a></li>
+                            <li><a href="#">Cambiar de cuenta</a></li>
+                            <li><a href="#">Cerrar sesión</a></li>  
+                        </ul>
+                    </nav>
+                </li>
+                <div class="sleep-mode"></div>
+                <li class="header__sells">
+                    <span class="title-minimized">Devoluciones</span>
+                    <span>y Pedidos</span>
+                </li>
+    
+                <li class="header__shopping-cart">
+                    <i class="las la-shopping-cart"></i>
+                    <span>Cesta</span>
+                </li>
+            </ul>
+            
+        </nav>
+        <nav>
+            <ul class="row header__row-2">
+                <li onclick="showSpecialMenu()"><a href="#"><span class="menu-item"></span>Todo</a></li>
+                <li><a href="#">Ofertas de Navidad</a></li>
+                <li><a href="#">Prime</a></li>
+                <li><a href="#">Música</a></li>
+                <li><a href="#">Historial de navegación</a></li>
+                <li><a href="#">Belleza</a></li>
+                <li><a href="#">Cheques regalo</a></li>
+                <li><a href="#">Volver a comprar</a></li>
+                <li><a href="#">Envío Gratis</a></li>
+                <li><a href="#">Kit de Compras</a></li>
+                <li><a href="#">Salud y cuidado personal</a></li>
+                <li><a href="#">Juguetes y juegos</a></li>
+                <li><a href="#">Salud y cuidado personal</a></li>
+                <li><a href="#">Tienda de navidad</a></li>
+                <li><a href="#">Amazon.es de maikel</a></li>
+                <li><a href="#">Hogar y cocina</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="carrousel">
+            <div class="navigation-arrow navigation-to-left" onclick="previousSlider()">
+                <i class="las la-angle-left"></i>
+            </div>
+            <div class="navigation-arrow navigation-to-right" onclick="nextSlider()">
+                <i class="las la-angle-right"></i>
+            </div>
+            <div class="slider-headband slider-1-active">
+                <div class="slider slider-1">
+                    <img width="100%" height="200px" src="./img/slider_3.jpg" alt="">
+                </div>  
+                <div class="slider slider-2">
+                    <img width="100%" height="200px" src="./img/slider_1.jpg" alt="">
+                </div>
+                <div class="slider slider-3">
+                    <img width="100%" height="200px" src="./img/slider_2.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="shop">
+            <div class="shop__item shop__item-1">
+                <h3 class="heading-tertiary">Ofertas de Navidad. Aún tienes tiempo para comprar</h3>
+                <img src="./img/shop_1.jpg" alt="">
+                <a href="#" class="box-link">Ahorra hasta el 40%</a>
+            </div>
+            <div class="shop__item shop__item-2">
+                <h3 class="heading-tertiary">Descubre dispositivos Amazon</h3>
+                <div class="galley-4-items">
+                   <figure>   
+                           <img src="./img/item_1.jpg" alt="">
+                           <figcaption>Echo snow</figcaption>      
+                   </figure>
+                   <figure>
+                        <img src="./img/item2.jpg" alt="">
+                        <figcaption>Fire TV stick 4k</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/item3.jpg" alt="">
+                        <figcaption>Tablet Fire HD 8</figcaption>
+                   </figure>
+                   <figure>
+                        <img src="./img/item4.jpg" alt="">
+                        <figcaption>Blink mini</figcaption>
+                   </figure>
+                </div>
+                <a href="#" class="box-link">Ver más</a>
+            </div>
+            <div class="shop__item shop__item-3">
+                <h3 class="heading-tertiary">Oferta Top</h3>
+                <img src="img/item5.jpg" alt="">
+                <a href="#" class="box-link">Ver más</a>
+            </div>
+            <div class="shop__item shop__item-4">
+                <h3 class="heading-tertiary">Ofertas de Navidad. Ahorra hasta el 40%</h3>
+                <p>Nuevas ofertas cada día. Descubre nuestras ofertas del día, ofertas flash y ofertas</p>
+                <a href="#" class="box-link">Ver más</a>
+            </div>
+            <div class="shop__item shop__item-5 ">
+                <h3 class="heading-tertiary">Ver en prime video</h3>
+            
+                <span>2067</span>
+                <span>Empieza a ver</span>
+            </div>
+            <div class="shop__item shop__item-6">
+                <h3 class="heading-tertiary">Ahorra y prepárate para Navidad</h3>
+                <img src="./img/shop2.jpg" alt="">
+                <a href="#" class="box-link">Descubre todas las ofertas</a>
+            </div>
+            <div class="shop__item shop__item-7">
+                <h3 class="heading-tertiary">Ofertas Top de Navidad</h3>
+                <img src="./img/topNavidad.jpg" alt="">
+                <a href="#" class="box-link">Precio bajos para navidad</a>
+            </div>
+            <div class="shop__item shop__item-8" style="display:none">
+                <h3 class="heading-tertiary"></h3>
+                
+            </div>
+            <article class="horizontalNavigation">
+                <h2>Ofertas de Reyes Magos por categoría</h2>
+                <a href="#" class="box-link" href="#">Ahorra hasta el 40%</a>
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll1.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll2.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll3.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll4.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll5.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll6.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll7.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll8.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll9.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/horizScroll10.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="pseduo-track"></div>
+              </article>
+              <article class="horizontalNavigation">
+                <h2>Ofertas en Salud y Cuidado personal</h2>
+                <a href="#" class="box-link">Ahorra hasta el 40%</a>
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <div class="pseudo-item">
+                        <img src="./img/shop1.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product2.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product3.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product4.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product5.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product6.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product7.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product8.jpg" alt="">
+                    </div>
+                    <div class="pseudo-item">
+                        <img src="./img/product9.jpg" alt="">
+                    </div>
+
+                  </div>
+                </div>
+                <div class="pseduo-track"></div>
+              </article>
+                
+                <div class="shop__item">
+                    <h3 class="heading-tertiary">Ofertas de Reyes Magos por categoría</h3>
+                    <div class="galley-4-items">
+                        <figure>   
+                                <img src="./img/ofertaReyes1.jpg" alt="">
+                                <figcaption>Coche y moto</figcaption>      
+                        </figure>
+                        <figure>
+                            <img src="./img/ofertareyes2.jpg" alt="">
+                            <figcaption>Equipaje</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./img/ofertareyes3.jpg" alt="">
+                            <figcaption>Joyería y Relojes</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./img/ofertareyes4.jpg" alt="">
+                            <figcaption>Libros</figcaption>
+                        </figure>
+                    </div>
+                    <a href="#" class="box-link">Ahorra hasta el 40%</a>
+                </div>
+                <div class="shop__item">
+                    <h3 class="heading-tertiary">Ofertas de Reyes Magos por categoría</h3>
+                    <div class="galley-4-items">
+                       <figure>   
+                               <img src="./img/ofertareyes4.jpg" alt="">
+                               <figcaption>Belleza</figcaption>      
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes5.jpg" alt="">
+                            <figcaption>Alimentación y bebidas</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes6.jpg" alt="">
+                            <figcaption>Oficina y papelería</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes7.jpg" alt="">
+                            <figcaption>Productor para mascotas</figcaption>
+                       </figure>
+                    </div>
+                    <a href="#" class="box-link">Ahorra hasta el 40%</a>
+                </div>
+                <div class="shop__item">
+                    <h3 class="heading-tertiary">Productos de pequeñas empresas relacionados con a…</h3>
+                    <div class="galley-4-items">
+                       <figure>   
+                            <img src="./img/ofertareyes9.jpg" alt="">    
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes10.jpg" alt="">
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes11.jpg" alt="">
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes12.jpg" alt="">
+                       </figure>
+                    </div>
+                </div>
+                <div class="shop__item">
+                    <h3 class="heading-tertiary">Ofertas de Reyes Magos por categoría</h3>
+                    <div class="galley-4-items">
+                       <figure>   
+                               <img src="./img/ofertareyes13.jpg" alt="">
+                               <figcaption>Moda</figcaption>      
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes14.jpg" alt="">
+                            <figcaption>Cupones</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes15.jpg" alt="">
+                            <figcaption>Marcas Amazon</figcaption>
+                       </figure>
+                       <figure>
+                            <img src="./img/ofertareyes16.jpg" alt="">
+                            <figcaption>Bricolaje y herramientas</figcaption>
+                       </figure>
+                    </div>
+                    <a href="#" class="box-link">Ahorra hasta el 40%</a>
+                </div>
+
+        </section>
+        
+
+        
+    </main>
+    <footer>
+        <a class="go-up" href="#top">Volver arriba</a>
+        <nav class="footer-navigation">
+            <ul>
+                <li class="list-title"><a href="#">Conócenos</a></li>
+                <li><a href="#">Trabajar en Amazon</a></li>
+                <li><a href="#">Sobre Amazon.es</a></li>
+                <li><a href="#">Sostenibilidad</a></li>
+            </ul>
+
+            <ul>
+                <li  class="list-title"><a href="#">Gana dinero con nosotros</a></li>
+                <li><a href="#">Vender en Amazon</a></li>
+                <li><a href="#">Vender en Amazon Business</a></li>
+                <li><a href="#">Vende en Amazon Handmade</a></li>
+                <li><a href="#">Programa de afiliados</a></li>
+                <li><a href="#">Logística de Amazon</a></li>
+                <li><a href="#">Promociona tus productos</a></li>
+                <li><a href="#">Publica tu libro en Kindle</a></li>
+                <li><a href="#">Amazon Pay</a></li>
+                <li><a href="#">Alojar un Amazon Hub</a></li>
+            </ul>
+
+            <ul>
+                <li  class="list-title"><a href="#">Métodos de pago Amazon</a></li>
+                <li><a href="#">Métodos de pago</a></li>
+                <li><a href="#">Conversor de divisas de Amazon</a></li>
+                <li><a href="#">Cheques Regalo</a></li>
+                <li><a href="#">Recarga online</a></li>
+                <li><a href="#">Recarga en tienda</a></li>
+            </ul>
+
+            <ul>
+                <li  class="list-title"><a href="#">¿Necesitas ayuda?</a></li>
+                <li><a href="#">Amazon y COVID-19</a></li>
+                <li><a href="#">Localizar o gestionar compras</a></li>
+                <li><a href="#">Tarifas y políticas de envío</a></li>
+                <li><a href="#">Amazon Prime</a></li>
+                <li><a href="#">Devolver o reemplazar productos</a></li>
+                <li><a href="#">Reciclaje</a></li>
+                <li><a href="#">Gestionar contenido y dispositivos</a></li>
+                <li><a href="#">App Amazon</a></li>
+                <li><a href="#">Amazon Assistant</a></li>
+                <li><a href="#">Atención al Cliente</a></li>
+                <li><a href="#">IVA sobre los bienes</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <nav class="countries">
+          <picture>
+                <img  src="./img/amazon_dark.png" alt="">
+          </picture>
+          <ul class="footer-navigation2">
+              <li><a href="#">Australia</a></li>
+              <li><a href="#">Alemania</a></li>
+              <li><a href="#">Brasil</a></li>
+              <li><a href="#">Canadá</a></li>
+              <li><a href="#">China</a></li>
+              <li><a href="#">Estados Unidos</a></li>
+              <li><a href="#">Francia</a></li>
+              <li><a href="#">India</a></li>
+              <li><a href="#">Italia</a></li>
+              <li><a href="#">Japón</a></li>
+              <li><a href="#">Mexico</a></li>
+              <li><a href="#">Países bajos</a></li>
+              <li><a href="#">Polonia</a></li>
+              <li><a href="#">Emiratos Árabes Unidos</a></li>
+              <li><a href="#">Reino Unido</a></li>
+              <li><a href="#">Singapur</a></li>
+              <li><a href="#">Turquía</a></li>
+          </ul>  
+        </nav>
+    </footer>
+    <div class="special-menu">
+        <div class="menu-welcome">Hola, maikel <span class="close"><i class="las la-times" onclick="hideSpecialMenu(this.closest('.special-menu'))"></i></span></div>
+        <nav class="nav__list-of-list">
+            <ul class="nav__list">
+                <li><span>Tendencias</span></li>
+                <li><a href="#">Los Más Vendidos</a></li>
+                <li><a href="#">Últimas Novedades</a></li>
+                <li><a href="#">Productos del momento</a></li>
+            </ul>
+            <ul class="nav__list">
+                <li><span>Contenido Y Dispositivos Digitales</span></li>
+                <li><a href="#">Amazon Prime Video</a></li>
+                <li><a href="#">Amazon Music</a></li>
+                <li><a href="#">Amazon Photos</a></li>
+                <li><a href="#">Echo y Alexa</a></li>
+                <li><a href="#">Amazon Fire TV</a></li>
+                <li><a href="#">E-readers y eBooks Kindle</a></li>
+                <li><a href="#">Tablets Fire</a></li>
+                <li><a href="#">Appstore para Android</a></li>
+                <li><a href="#">Audible Audiolibros y Podcasts</a></li>
+            </ul>
+
+            <ul class="nav__list">
+                <li><span>Buscar Por Departamento</span></li>
+                <li><a href="#">Libros</a></li>
+                <li><a href="#">Cine, TV y Música</a></li>
+                <li><a href="#">Electrónica</a></li>
+                <li><a href="#">Informática y Oficina</a></li>
+                <li><a href="#">Ver Todo</a></li>
+            </ul>
+
+            <ul class="nav__list">
+                <li><span>Programas Y Características</span></li>
+                <li><a href="#">Supermercado DIA</a></li>
+                <li><a href="#">Cheques Regalo y Recargas</a></li>
+                <li><a href="#">Handmade</a></li>
+                <li><a href="#">Amazon Launchpad</a></li>
+                <li><a href="#">Ver Todo</a></li>
+            </ul>
+
+            <ul class="nav__list">
+                <li><span>Ayuda Y Ajustes</span></li>
+                <li><a href="#">Mi cuenta</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">España</a></li>
+                <li><a href="#">Atención al Cliente</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    <div class="shadow">
+    </div>
+    <!-- <div class="pop-up__ubication">
+        <h2>Elige tu ubicación</h2>
+        <p class="instructions-1">Selecciona una dirección de envío para ver las opciones de envío</p>
+        <div class="ubication__box">
+            <p><span>Michael- Valencia</span> - 46343</p>
+            <p>Predeterminada</p>
+        </div>
+        <div class="ubication__box">
+            <p><span>Correos - Playa de San Juan</span> Carretera gral playa san juan nº 11, playa de san juan santa cruz de tenerife
+            36784</p>
+        </div>
+        <a href="3">Modificar direcciones de envío</a>
+        <span>o introduce un código postal en España</span>
+        <label ><input type="text"> </label>
+        <button>Confirmar</button>
+        <hr>
+        <span>o</span>
+        <select name="" id="">
+            <option value="España">Envios al extranjero</option>
+            <option value="España">España</option>
+            <option value="España">Francia</option>
+        </select>
+        
+        
+    </div> -->
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

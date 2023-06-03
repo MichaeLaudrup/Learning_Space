@@ -1,0 +1,9 @@
+{
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "no-extra-parens": [
+    "error",
+    "all",
+    { "nestedBinaryExpressions": false, "enforceForArrowConditionals": false }
+  ]
+}

@@ -1,0 +1,61 @@
+.story{
+    width: 75%;
+    margin: 0 auto; 
+    box-shadow: 0 1.88rem 3.75rem rgba(0,0,0, .1);
+    border-radius: 3px;
+    padding: 3.75rem;
+    padding-left: 5.62rem;
+    transform: skewX(-12deg); 
+    background-color: rgba(255, 255, 255, 0.548);
+
+
+
+    &__shape{
+        width: 9.37rem;
+        height: 9.37rem;
+        float:left; 
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: skewX(12deg) translateX(-1.37rem); 
+        position:relative; 
+        img{
+            height: 100%;
+            transform: translateX(-1.88rem) scale(1.4);
+            transition: all .5s ease;
+            
+        }
+    }
+
+    &__text{
+        transform: skewX(12deg); 
+    }
+
+    &__caption{
+        position:absolute; 
+        top:50%; 
+        left:50%; 
+        transform: translate(-50%,20%);
+        color:white; 
+        text-transform: uppercase;
+        font-size: 1.06rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s ease; 
+        backface-visibility: hidden;
+
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+        backface-visibility: hidden;
+    }
+
+    &:hover img{
+       transform: translateX(-1.88rem)  scale(1);
+       filter: blur(3px) brightness(80%);
+       backface-visibility: hidden;
+    }
+}

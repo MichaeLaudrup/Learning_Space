@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Michael Laudrup Luis González">
+        <!-- Importante: Tanto title como meta-description sirven para mejorar posicionamiento SEO -->
+        <meta name="description" content="Esta es una pagina web de Ecommerce qye ofrece productos tecnologicos">
+        <title>Hermes Fly</title>
+        <!-- el meta keywords es ignorado por la ingenieria de busqueda por temas de mal uso en el pasado -->
+
+        <!-- TWITTER - CARDS : Para que los enlaces se vean en otros lugares con imagen y descripcion -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Fly with Hermes">
+        <meta name="twitter:creator" content="Michael Laudrup Luis Gonzalez">
+        <meta name="twitter:description" content="Ve a Francia, Italia o Berlín por precios de escandlos">
+        <meta name="twitter:img" content="./resources/img/paris.jpg">
+        <meta name="twitter:image:alt" content="Se muestra una imagen de la torre effiel ">
+        
+        <!-- JSON LD es un script -->
+
+        <!-- Hay que usar og para facebook,  -->
+        <!-- Paginas internacionales  -->
+        <!--<meta http-equiv="refresh" content="30"> Especifica cada cuanto tiempo tiene que refrescarse la pagina en segundos -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- ¿Deberia seguir usandose -->
+
+        <!-- Muy importante: Esta linea debe incluirse siempre por temas de responsive en mobile, establece el zoom a 1-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/styleContacto.css">
+    </head>
+    <body>
+        <header class="contenedor-cabecera">
+            <div class="brand">
+                <img src="./resources/img/hermeslogo.png" alt="" width="100px" height="auto">
+                <h1>Hermes</h1> 
+            </div>
+            <nav class="navegador-principal">
+                <ul class="list-open">
+                    <li>
+                        <a class="list-item" href="./index.htm"><span>Home</span><i class="las la-home"></i></a>
+                    </li>
+                    <li>
+                        <a class="list-item" href="./viaja.html"><span>Viaja</span> <i class="las la-plane"></i></a>
+                    </li>
+                    <li>
+                        <a class="list-item" href="registro.htm"><span>Registrarme</span> <i class="las la-ticket-alt"></i></a>
+                    </li>
+                    <li>
+                        <a class="list-item" href="#"><span>Centro de ayuda</span><i class="las la-question-circle"></i></a>     
+                    </li>
+                    <li>
+                        <a class="list-item" href="contacto.htm">Contacto <i class="las la-users"></i></a></i>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="btn-mobile-nav">
+                <i class="las la-bars nav-icon icon-mobile-nav" name="menu-outline"></i>
+                <i class="las la-times icon-mobile-nav" name="close-outline"></i>
+            </button>
+
+        </header>
+
+        <main class="contact-container">
+            <section class="contact-form-container">
+                <form>
+                    <div class="input-box">
+                        <input class="input-with-movement" name="emailContact" id="contact-email" type="text">
+                        <label for="contact-email">Email</label>
+                        <span id="no-valid-email" class="invalid-message">El email no es válido</span>
+                    </div>
+                    <div class="input-box">
+                        <input class="input-with-movement" name="nameContact"type="text"> 
+                        <label for="nombre">Nombre</label>
+                        <span id="no-valid-name"class="invalid-message">El nombre debe de tener una longitud entre 3-16 digitos</span>
+                    </div>
+                   <div class="input-box">
+                        <input class="input-with-movement" id="asunto" type="text"> 
+                        <label for="asunto">Asunto</label>
+                   </div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="messagge" id="mensaje" cols="30" rows="10"></textarea> 
+                    <button id="submit">Enviar <i class="las la-envelope"></i></button> 
+
+                    <div class="policy-box">   
+                        <input id="check-privacy" type="checkbox" required>
+                        <label for="check-privacy">Aceptas nuestra <a href="#">Política de privacidad</a></label>  
+                    </div>
+                    <p>Hermes Fly S.A almacena estos datos con el fin de facilicitar para usted el proceso de adquisión de nuevos servicios, además, siempre tendrá a su disposición la posibilidad de eliminar sus datos a través de nuestro correo x@x.es</p>
+                </form>
+                <ul class="contact-list">
+                    <li><i class="las la-map-marker-alt"></i><span>Comunitat Valenciana, España, 40012</span> </li>
+                    <li><i class="las la-phone-alt"></i><span>(034) 922 023-308</span> </li>
+                    <li><i class="las la-at"></i><span>flyHermes@hello.com</span> </li>
+                </ul>
+            </section>
+        </main>
+
+         <footer>
+            <nav>
+                <ul class="lista-footer">
+                    <li>Sobre nosotros</li>
+                    <li>Nota Legal</li>
+                    <li>Ayuda y contacto</li>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                </ul>
+            </nav>
+            
+            <div class="copyRight">
+                <p>Copyright &copy; Michael Laudrup Luis González</p>
+            </div>
+
+        </footer>
+        
+
+        <section id="cookie-message" class="cookie">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, explicabo quaerat.
+            <button onclick=hideCookie()>Acepto cookies</button>
+        </section>
+
+        <script src="./js/contact.js"></script>
+    </body>
+</html>

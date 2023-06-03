@@ -1,0 +1,137 @@
+.contact-container{
+    min-height: 80vh; 
+    width: 100%;
+    display:flex;  
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right,  #7c7c7ca6, #000000af), url('../resources/img/contacto.jpg');
+    background-position: center center;
+    
+}
+
+.contact-form-container{
+    width: 75%;
+
+    background: -webkit-linear-gradient(to right, #6ebdf1, #1c89d1);
+	background: linear-gradient(to right,  #6ebdf1, #1c89d1);
+    display:grid; 
+    column-gap: 2rem;
+    grid-template-columns: 1fr 0.7fr;
+    padding: 2rem 4rem;
+    margin: 3rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.contact-form-container form {
+    row-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-box{
+    position: relative; 
+    margin-top: 2rem;
+}
+
+.input-box label{
+    position: absolute; 
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.contact-form-container form label{
+    font-weight: 700;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+}
+
+
+
+.contact-form-container form input{
+    padding: 0.5rem;
+    border: 0px; 
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    width: 90%;
+}
+
+.contact-form-container textarea{
+    width: 90%;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+ .contact-form-container form  .input-with-movement:focus + label{
+    transform: translateY(-100%);
+} 
+
+.contact-form-container button{
+    width: 90%;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.contact-form-container ul {
+    color:white; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    font-size: 1.7rem;
+    list-style: none;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+}
+
+.contact-list li{
+    display: flex;
+    gap:1rem; 
+    align-items: center;
+}
+
+.contact-list li i{
+    font-size: 4rem;
+}
+
+.label-up{
+    transform: translateY(-100%);
+}
+
+
+
+.invalid-message{
+    display:none; 
+    color:rgb(255, 0, 0); 
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.policy-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.policy-box input{
+    max-width: 10%;
+}
+
+.policy-box + p{
+    color:white; 
+    font-size: 1.25rem;
+}
+
+/*Tablet version*/
+@media screen and (min-width:480px) and (max-width:768px) { 
+	.contact-form-container{
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+}
+
+/*Mobile version*/
+@media (max-width:480px)  { 
+    .contact-form-container{
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+}

@@ -1,0 +1,558 @@
+
+:root{
+    --primary-color: rgb(255, 255, 255); 
+    --second-color: #1c7ed6;
+    --second-color-darkest: #0f4574;
+    --acent-color: rgb(10, 15, 88);
+    --third-color: rgb(255, 255, 255);  
+    --font-color-primary: rgb(255, 255, 255);
+    --font-color-secondary: rgb(68, 68, 68); 
+}
+
+
+/*++++++++++++++++++++++++COMUN A TODAS LAS PAGINAS (HEADER, FOOTER)++++++++++++++++++++++++++++++++++++++++++++*/
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: bordstrokeer-box;
+}
+
+body{
+    position:relative; 
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+header a:link,
+header a{
+    color:var(--font-color-primary);
+    text-decoration: none; 
+}
+
+
+/* HEADER COMÚN A TODAS LAS PÁGINAS */
+.brand-section{
+    padding: 2vh 2vw 2vh 2vw; 
+}
+
+.main-nav-container{
+    width: 100%;
+    background-color: var(--second-color);  
+    display:flex;   
+    justify-content: space-between; 
+}
+
+.navigation-links{
+    display: flex;
+    list-style: none;
+}
+
+.navigation-links > li {
+    text-decoration: none;
+    padding: 2.5vh 1.4vw ; 
+    text-align: center; 
+}
+
+.nav-icons{
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-color); 
+}
+
+h1{
+    text-align: center;
+    color: var(--primary-color); 
+}
+
+.brand{
+    display: flex;
+    align-items: center; 
+    padding: 0 2vw;
+}
+
+.main-footer{
+    position: absolute;
+    bottom:0; 
+    padding: 2vh 0vw 2vh 0vw; 
+    text-align: center;
+    width:100%;
+}
+
+
+
+.spinner{
+    position:relative; 
+    height:90vh;
+    display:grid; 
+    align-items: center;
+    justify-items: center;
+}
+
+.rect-1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 4px solid var(--second-color); 
+    background-color: var(--second-color-darkest);
+    animation: spin 4s linear infinite; 
+    border-radius: 20px;
+}
+
+.rect-2{
+    position:absolute; 
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--second-color-darkest); 
+    background-color: var(--second-color);
+    animation: spin 4s linear infinite reverse; 
+    border-radius: 10px;
+}
+
+.rect-3{
+    position:absolute; 
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--second-color-darkest); 
+    background-color: var(--second-color);
+    animation: spin 4s linear infinite reverse; 
+}
+
+.rect-4{
+    position:absolute; 
+    border-radius: 10px;
+    background-color: var(--second-color-darkest);
+    width: 75px;
+    height: 75px;
+    border: 2px solid var(--second-color); 
+    animation: spin 4s linear infinite; 
+}
+
+.spinner-text{
+    position:relative; 
+    top: 150px;  
+    font-size: 2rem; 
+}
+
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+
+/*++++++++++++++++++++++++ PAGINA DE INICIO ++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+.bienvenida{
+    position:relative; 
+    overflow: hidden;
+    width: 100%;
+}
+
+.main-image{
+    width: 100%;
+    filter:brightness(0.85);
+}
+
+.image-welcome-description{
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: 2%;
+    margin-top: 10%;
+    left:7%;
+    top:0;  
+    position:absolute; 
+    color:var(--second-color-darkest); 
+}
+
+.image-welcome-description h2{
+    position:relative; 
+}
+
+
+
+.go-buy-button{
+    background-color: var(--second-color-darkest); 
+    float:right; 
+    padding: 0.9vw;
+    border: 0px; 
+    margin-top: 3%;
+}
+
+.go-buy-button a{
+    font-weight: bold;
+    color:var(--primary-color); 
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.image-welcome-description p{
+    font-weight: 700;
+}
+
+/*++++++++++++++++++++++++ COMUN A TODAS LA ZONA DE COMPRAS  ++++++++++++++++++++++++++++++++++++++++++++*/
+
+.breadcrum-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1vh;
+    column-gap: 1vw ;
+    row-gap: 10px;
+    background-color: var(--second-color-darkest);
+}
+
+.breadcrum-list li{
+   list-style: none;
+   color:var(--font-color-primary); 
+}
+
+.breadcrum-list a {
+    text-decoration: underline;
+}
+
+.breadcrum-list span {
+    color:white; 
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++ COMUN A TODOS LAS SECCIONES DE COMPRA (seccion principal y subseccions) +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+.main-shop-section{
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw ;
+    justify-content: center;
+    column-gap:2vw ;
+    padding: 15vh 0;   
+
+}
+
+.photo-cart{
+    position:relative; 
+}
+
+.photo-cart > img{
+    width: 100%;
+
+}
+
+.photo-cart:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+
+
+.photo-cart-header{
+    color:var(--second-color-darkest); 
+    text-align: center;
+    padding: 2vh 0vw 2vh 0vw;
+}
+
+
+
+/* ZONA DE PORTATILES*/
+
+
+.main-container-laptos{
+    position:relative; 
+    display:grid;
+    grid-template-columns: 1.7fr 5fr;
+}
+.shopping-section{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    align-items: center;
+    padding-bottom: 5vh;
+    margin-bottom: 7vh;  
+
+}
+
+.shopping-section > article {
+    border: 2px solid rgba(0, 0, 0, 0.377); 
+    width: 85%; 
+    background-color: var(--third-color);
+    color:var(--second-color-darkest); 
+    padding: 2vh 3vw 2vh 3vw; 
+    border-radius: 15px;
+    border-color: 2px solid black;
+    opacity:0.8; 
+    display:grid; 
+    grid-template-columns: 4fr 6fr;
+    gap: 3vh 5vw;
+}
+
+.shopping-section > article header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.shopping-section > article img {
+    grid-column: 1;
+    grid-row: 2 / 3; 
+    align-self: center;
+    width: 100%;
+}
+.shopping-section > article footer {
+    display:flex; 
+    justify-content: space-around; 
+}
+
+.shopping-section > article:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity: 1;
+}
+
+.item-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.price{
+    text-align: center; 
+    grid-column: 1; 
+    grid-row:3/4; 
+    color:black; 
+}
+
+
+
+.shopping-section button {
+    justify-self: end;
+    text-align: center;
+    padding: 0 1.2vw; 
+    border-radius: 10%;
+    background-color: var(--second-color);
+    color:var(--font-color-primary); 
+}
+
+.list-features-icon{
+    width: 20px;
+}
+
+
+
+/**************************************************COMUN A TODAS LAS SUB-SECCIONES DE COMPRA (portatiles, ordenadores, telefonos...etc) *********************************/
+
+aside{
+    top:5px; 
+    margin-top: 5vh ;
+    margin-left: 5vh; 
+    height: 50vw;
+    background-color: var(--third-color);
+    color: var(--font-color-secondary); 
+}
+
+.vertical-menu{
+    
+    position: sticky;
+    border-radius: 15px ;
+    display: grid;
+    row-gap: 2vh;
+}
+
+.vertical-menu ul {
+    padding-top: 2vh;
+}
+.vertical-menu li {
+    text-align: center;
+    list-style: none;
+    padding: 2vh 0 2vh 0 ;
+
+}
+
+.vertical-menu a{
+    color:var(--font-color-secondary); 
+    text-decoration: none;
+}
+
+.vertical-menu li:hover {
+    color:var(--font-color-primary);
+    background-color: var(--second-color) ;
+    text-align: center;
+    list-style: none;
+    padding: 2vh 0 2vh 0 ;
+}
+
+.vertical-menu li:hover a{
+    color:var(--font-color-primary); 
+}
+
+
+.actived{
+    color:var(--second-color);
+    background-color: var(--second-color) ;
+}
+
+li.actived a {
+    color: var(--font-color-primary); 
+}
+
+.item-content ul {
+    list-style: none;
+}
+
+.item-content li:not(:last-child){
+    margin-bottom: 2vw;
+}
+
+
+button.price:hover{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+button.price:click{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+
+
+
+/*+++++++++++++++++++++ INDEPENDIENTES +++++++++++++++++++++++++++*/
+
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.font-color-primary{
+    color: var(--font-color-primary); 
+}
+
+.font-color-secundary{
+    color: var(--font-color-secondary); 
+}
+
+.prim-bg{
+    background-color: var(--second-color);
+}
+
+.hidden{
+    display:none; 
+}
+
+
+
+
+.font-size-level0{
+    font-size:2rem; 
+}
+
+
+.font-size-level1{
+    font-size: 1.4rem;
+}
+
+h1.font-size-level1{
+    font-size: 1.6rem;
+}
+
+.font-lv-3{
+    font-size: 1rem; 
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Mobile version*/
+@media (max-width:480px)  { 
+    html,body{
+        font-size:14px; 
+    }
+    .vertical-menu{
+        display: none;
+    }
+    .main-container-laptos{
+        grid-template-columns: 1fr;
+    }
+    .brand{
+        display:inline-block; 
+    }
+    .main-nav-container{
+        flex-direction: column; 
+        justify-items: center;
+    }
+
+    .navigation-links{
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .main-shop-section{
+        display: grid;
+        padding-top:5vh; 
+        grid-template-columns: 70vw ;
+        row-gap: 5vh;
+    }
+
+ }
+
+/*Tablet version*/
+@media (min-width:480px) and (max-width:768px) { 
+    .vertical-menu{
+        display: none;
+    }
+    .main-container-laptos{
+        grid-template-columns: 1fr;
+    }
+
+    .font-size-level1{
+        font-size:1.3rem;
+    }
+    .main-shop-section{
+        display: grid;
+        grid-template-columns: 70vw ;
+        row-gap: 5vh;
+    }
+    html,body{
+        font-size:14px; 
+    }
+
+ }
+
+ /*PC version*/
+ @media (min-width:769px) and (max-width:1024px) { 
+    html, body{
+        font-size:14px;
+   }  
+
+
+ }
+
+ /*Extra large screens*/
+ @media (min-width:1025px){
+    html, body{
+         font-size:17px;
+    }  
+ }
+
+
+
+
+

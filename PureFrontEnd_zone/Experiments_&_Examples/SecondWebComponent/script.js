@@ -1,0 +1,1 @@
+const sumareImprimir = function(a, b) { console.log(a + b) };

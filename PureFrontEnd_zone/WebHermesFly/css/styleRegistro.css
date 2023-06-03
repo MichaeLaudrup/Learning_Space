@@ -1,0 +1,162 @@
+
+
+
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+	flex-direction: column;
+    overflow: hidden;
+	padding:4rem 2rem; 
+	background-image: linear-gradient(to right,  #7c7c7ca6, #000000af), url(../resources/img/registration.jpg);
+	background-position: center center;
+	min-height: 100vh;
+	
+}
+
+.sign-selector{
+	display: flex;
+	justify-content: space-between;
+	gap: 6rem; 
+	padding: 2rem;
+}
+
+.sign-selector button {
+	padding: 1rem 2rem;
+	cursor: pointer;
+
+}
+
+.btn--actived{
+	color:white; 
+	background-color: #6ebdf1;
+}
+
+.hide-target{
+	display:none !important; 
+}
+
+.target-container{
+	margin-top: 2rem;
+	width: 100%;
+	display:flex; 
+	justify-content: center;
+}
+
+
+.form-registration-container{
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	display: flex;
+	flex-direction: column;
+	gap:3.2rem; 
+	padding: 6rem 2rem;
+	width: 35%;
+	background: -webkit-linear-gradient(to right, #6ebdf1, #68aedd);
+	background: linear-gradient(to right,  #6ebdf1, #1c89d1);
+}
+
+.input-box input:focus + label  {
+	transform:translateY(-100%); 
+}
+
+.label-up{
+	transform:translateY(-100%); 
+}
+
+.input-box{
+	position:relative; 
+}
+
+.input-box label{
+	color:white; 
+	font-size: 1.3rem;
+	font-weight: 700;
+	position: absolute;
+	left:0; 
+	top:0; 
+	padding: 0.25rem;
+	transition: transform 0.5s ease-in-out;
+}
+
+.input-box input{
+	background: none;
+	border: none;
+	border-bottom: 1.5px solid white;
+	padding: 1rem;
+	width: 100%;
+}
+
+
+form .las {
+	position:absolute;
+	font-size: 1.5rem;
+	padding:0.15rem;
+	margin-right: 1.5rem;
+	border-radius: 50%;
+	top: 9%;
+	right:0; 
+
+}
+
+.ok{
+	color:rgb(6, 255, 6);
+	border: 2px solid  rgb(6, 255, 6); 
+}
+
+.err{
+	color:rgb(255, 6, 6);
+	border: 2px solid  rgb(255, 6, 6); 
+}
+.form-registration-container button {
+	padding: 1rem 2rem;
+}
+
+.form-registration-container label{
+	color:white; 
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+.policy-box p {
+	color:white;
+	line-height: 1.8; 
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+}
+
+.messagge-error{
+	display:none; 
+	font-size: 1.4rem;
+	padding:.5rem; 
+	margin-top: 1rem;
+	color: red; 
+	background-color: rgba(255, 255, 255, 0.479);
+}
+
+#check-privacy:not(:checked) ~ .messagge-error{
+	display:inline-block; 
+}
+
+#check-privacy:checked ~ .messagge-error{
+	display:none; 
+}
+
+@media (max-width:480px)  { 
+	.form-registration-container{
+		width: 100%;
+		
+	}
+}
+
+/*Tablet version*/
+@media screen and (min-width:480px) and (max-width:768px) { 
+	.form-registration-container{
+		width: 60%;
+		
+	}
+}
+
+/*Tablet version*/
+@media screen and (min-width:1200px) { 
+}

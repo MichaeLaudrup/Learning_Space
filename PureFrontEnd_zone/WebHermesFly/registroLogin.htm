@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/loginRegistro-style.css">
+    </head>
+    <body>
+        <main>
+            <div class="row">
+                <div class="background-image">
+                    <div class="form-container">
+                        <form class="form" autocomplete="off">
+                            <div class="tab-carrousel">
+                                <div class="tab tab--1">
+                                    <div class="tab__title">
+                                        <span>Primero tus datos básicos</span>
+                                    </div>
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" id="email-register" type="email" required>
+                                            <span class="form__label-text" >Correo electrónico</span>
+                                        </label>
+                                    </div>
+    
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" type="date" value="" placeholder="hello">
+                                            <span class="form__label-text"></span>
+                                        </label>
+                                    </div>
+        
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" id="full-name" type="text" required>
+                                            <span class="form__label-text">Nombre completo</span>
+                                        </label>
+                                    </div>
+        
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" type="text">
+                                            <span class="form__label-text">Apellidos</span>
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" id="full-name" type="text">
+                                            <span class="form__label-text">DNI</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- PESTAÑA NUMERO 2 -->
+                                <div class="tab tab--2">
+                                    <div class="tab__title">
+                                        <span>AHORA TUS DATOS BANCARIOS</span>
+                                    </div>
+                                    <div class="row type-of-payments">
+                                        <picture class="form__payment-symbol-container">
+                                            <img src="./resources/img/MasterCard_Logo.svg.png" alt="" class="form__payment-symbols">
+                                        </picture>
+                                        <picture class="form__payment-symbol-container">
+                                            <img src="./resources/img/png-clipart-visa-visa.png" alt="" class="form__payment-symbols">
+                                        </picture>
+                                        <picture class="form__payment-symbol-container">
+                                            <img src="./resources/img/png-transparent-paypal-logo-text-line-blue.png" alt="" class="form__payment-symbols">
+                                        </picture>
+                                    </div>
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" id="card-name" type="text">
+                                            <span class="form__label-text">Nombre tarjeta de crédito</span>
+                                        </label>
+                                        
+                                    </div>
+        
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" id="target-number" type="text">
+                                            <span class="form__label-text">Número de tarjeta</span>
+                                        </label>
+                                    </div>
+        
+                                    <div class="form__group">
+                                        <label class="form__label">
+                                            <input class="form__input" type="text">
+                                            <span class="form__label-text">Mes</span>
+                                        </label>
+
+                                        <label class="form__label">
+                                            <input class="form__input" type="text">
+                                            <span class="form__label-text">Año</span>
+                                        </label>
+                                        <label class="form__label">
+                                            <input class="form__input" type="number">
+                                            <span class="form__label-text">CVV</span>
+                                        </label>
+                                    </div>
+
+                                </div>         
+                      
+
+                            <!-- PESTAÑA NUMERO 3 -->
+                            <div class="tab tab--3">
+                                <div class="tab__title">
+                                    <span>CONOCE QUE HAREMOS CON TUS DATOS</span>
+                                </div>
+                                <div class="form__group">
+                                    <p class="policy-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio necessitatibus vitae, officiis praesentium ducimus tempora temporibus rem illum nam recusandae error earum reprehenderit deleniti impedit beatae ex doloribus? Nulla, natus? Veritatis voluptate quibusdam beatae! Totam, magni amet reprehenderit officia ipsa praesentium corrupti est officiis minima quis aut atque iste. Quisquam?</p>
+                                    <span>Si, acepto vuestra política de privacidad</span>
+                                    <label class="form__label">
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+
+                            </div>         
+                        </div>
+                            
+                            <div class="form_navigation-tab">
+                                <button class="btn btn--previous" onclick="previousTab(event)">&larr;</button>
+                                <button class="btn btn--next" onclick="nextTab(event)">&rarr;</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="logo-container">
+                        <img src="./resources/img/hermeslogo.png" alt="">
+                        <span class="logo__name">HERMES FLY</span>
+                        <span class="logo__name no-phone no-tablet">COMPANY S.A</span>
+                    </div>
+                </div>
+               
+            </div>
+        </main>
+        <script src="./js/advancedRegister.js"></script>
+    </body>
+</html>
+

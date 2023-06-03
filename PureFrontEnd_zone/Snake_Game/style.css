@@ -1,0 +1,85 @@
+:root{
+    --rotate-degrees: 180deg; 
+}
+
+*,*::before, *::after { margin:0; padding: 0; box-sizing: border-box;}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position:relative; 
+    background-image: linear-gradient(to right bottom,rgb(0, 0, 0), rgb(51, 51, 51));
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1{color:rgb(10, 245, 10); text-align: center; padding-top: 2rem;text-transform: uppercase;}
+
+
+
+
+.tablero {
+    position: absolute;
+    top:50%; 
+    left:50%; 
+    transform: translate(-50%,-50%);
+    background-color: rgb(17, 17, 17);
+    margin: 0 auto;
+    height: 70%;
+    border: 2px solid rgb(70, 70, 70);
+    box-shadow: rgba(255, 255, 255, 0.144) 5px 5px 8px;
+    display: grid;
+    gap:2px;
+    
+}
+
+.cell {
+    position:relative; 
+    display: inline-block;
+    background-color: rgb(17, 17, 17);
+}
+
+.snake-cell{
+    background-image: radial-gradient( rgb(10, 245, 10), rgb(11, 68, 11));
+    position: relative; 
+    border-radius: 50%;
+    width: 110%;
+    z-index: 1;
+    animation-name: levitation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+    box-shadow: rgba(255, 255, 255, 0.199) -2px -2px 3px;
+}
+
+@keyframes levitation {
+    0%{ transform: translateX(-6%) rotate(var(--rotate-degrees));}
+    50%{ transform: translateX(6%) rotate(var(--rotate-degrees));}
+    100%{ transform: translateX(-6%) rotate(var(--rotate-degrees));}
+}
+
+.snake-head {
+    z-index: 2;
+}
+
+.snake-head::after,.snake-head::before {
+    content: ""; 
+    display:block; 
+    position:absolute; 
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-image: radial-gradient(black 0px 30%, white 40% 100%);
+}
+
+.snake-head::after {
+    top:10%; 
+}
+.snake-head::before{
+    bottom: 10%;
+}
+
+.apple {
+    background-image: url('./apple.png');
+    background-position: center center;
+    background-size: contain;
+}

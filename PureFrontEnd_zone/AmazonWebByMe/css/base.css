@@ -1,0 +1,50 @@
+:root {
+    --color-main-dark: #131921; 
+    --color-main: #232f3e; 
+    --color-main-light: #37475A; 
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Amazon ember', sans-serif;
+    background-color: rgb(234, 237, 237);
+}
+
+main{
+    background-color: rgb(234, 237, 237);
+    position:relative; 
+}
+
+.sleep-mode{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position:absolute; 
+    top:0%; 
+    z-index:9000; 
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+}
+
+
+
+
+
+
+@media screen and (max-width: 990px) {
+    html{
+        font-size: 13px;
+    }
+}

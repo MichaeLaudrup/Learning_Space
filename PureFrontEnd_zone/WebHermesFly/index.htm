@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Michael Laudrup Luis González">
+        <!-- Importante: Tanto title como meta-description sirven para mejorar posicionamiento SEO -->
+        <meta name="description" content="Esta es una pagina web de Ecommerce qye ofrece productos tecnologicos">
+        <title>Hermes Fly</title>
+        <!-- el meta keywords es ignorado por la ingenieria de busqueda por temas de mal uso en el pasado -->
+
+        <!-- TWITTER - CARDS : Para que los enlaces se vean en otros lugares con imagen y descripcion -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Fly with Hermes">
+        <meta name="twitter:creator" content="Michael Laudrup Luis Gonzalez">
+        <meta name="twitter:description" content="Ve a Francia, Italia o Berlín por precios de escandlos">
+        <meta name="twitter:img" content="./resources/img/paris.jpg">
+        <meta name="twitter:image:alt" content="Se muestra una imagen de la torre effiel ">
+        
+        <!-- JSON LD es un script -->
+
+        <!-- Hay que usar og para facebook,  -->
+        <!-- Paginas internacionales  -->
+        <!--<meta http-equiv="refresh" content="30"> Especifica cada cuanto tiempo tiene que refrescarse la pagina en segundos -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- ¿Deberia seguir usandose -->
+
+        <!-- Muy importante: Esta linea debe incluirse siempre por temas de responsive en mobile, establece el zoom a 1-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header class="contenedor-cabecera">
+            <div class="brand">
+                <img src="./resources/img/hermeslogo.png" alt="" width="100px" height="auto">
+                <h1>Hermes</h1> 
+            </div>
+            <div class="list__li-search no-tablet no-phone">
+                <input class="nav__search-input" type="text" oninput="getDataAndUpdateList(this)" onkeydown="navigateSearchResultList(event)">
+                <i class="las la-search nav__search-icon"></i>
+                <div class="search-results">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navegador-principal">
+                <ul class="list-open">
+                    <li>
+                        <a class="list-item" href="./index.htm"><span>Home</span><i class="las la-home"></i></a>
+                    </li>
+                    <li>
+                        <a class="list-item" href="./viaja.html"><span>Viaja</span> <i class="las la-plane"></i></a>
+                    </li>
+                    <li>
+                        <a class="list-item" href="registro.htm"><span>Acceder</span> <i class="las la-ticket-alt"></i></a>
+                    </li>
+                    <li>
+                        <a class="list-item" href="#"><span>Centro de ayuda</span><i class="las la-question-circle"></i></a>     
+                    </li>
+                    <li>
+                        <a class="list-item" href="contacto.htm">Contacto<i class="las la-users"></i></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="btn-mobile-nav">
+                <i class="las la-bars nav-icon icon-mobile-nav" name="menu-outline"></i>
+                <i class="las la-times icon-mobile-nav" name="close-outline"></i>
+            </button>
+
+        </header>
+
+        <!-- BANNER PUBLICITARIO CON FORMATO SLIDER -->
+        <section id="contenedor-banner" class="banner">
+            <article id="slider-1" class="slider ">
+                <div class="banner-text">
+                    <header><h2>La ciudad del Amor</h2></header>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam suscipit alias accusamus rerum possimus, veniam illum perspiciatis quia ipsam minus.</p>
+                    <footer><button>¡Lo quiero ya!</button></footer>
+                </div>
+            </article>
+            <article id="slider-2" class="slider ">
+                <div class="banner-text">
+                    <header><h2>La antigua roma</h2></header>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam suscipit alias accusamus rerum possimus, veniam illum perspiciatis quia ipsam minus.</p>
+                    <footer><button>¡Lo quiero ya!</button></footer>
+                </div>
+            </article>
+            <article id="slider-3" class="slider" >
+                <div class="banner-text">
+                    <header><h2>La ciudad sin calles</h2></header>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam suscipit alias accusamus rerum possimus, veniam illum perspiciatis quia ipsam minus.</p>
+                    <footer><button>¡Lo quiero ya!</button></footer>
+                </div>
+            </article>
+            <div class="slider-points">
+                <span onclick="moverAlPunto(0)" class="slider-point slider-point--active"></span>
+                <span onclick="moverAlPunto(1)" class="slider-point"></span>
+                <span onclick="moverAlPunto(2)" class="slider-point"></span>
+            </div>
+            <i id="left-arrow" class="las la-angle-left flecha-slider flecha-izquierda" onclick="hello(event)"></i>
+            <i id="right-arrow" class="las la-angle-right flecha-slider flecha-derecha"></i>
+        </section>
+
+          <!-- CONTENIDO PRINCIPAL -->
+          <main>
+            <!-- DESCRIPCION DE SERVICIOS  -->
+
+            <section class="servicios">
+                <header><h2>Nuestros servicios</h2></header>
+                <article class="servicio-carta servicio1">
+                    
+                    <header>
+                        <i class="las la-hotel"></i>
+                        <h2>Reserva en nuestros hoteles</h2>
+                    </header>
+                        <ul class="servicios-list">
+                            <li>
+                                <i class="las la-stopwatch"></i>
+                                Reserva inmediata</li>
+                            <li>
+                                <i class="las la-compass"></i>
+                                Ubicación personalizada</li>
+                            <li>
+                                <i class="las la-suitcase"></i>
+                                Check-in automatico</li>
+                        </ul>
+                    <footer><button>¡Lo quiero!</button></footer>
+                </article>
+                <article class="servicio-carta">
+                    <header>
+                        <i class="las la-taxi"></i>
+                        <h2>Te llevamos al aeropuerto rápido</h2></header>
+                        <ul class="servicios-list">
+                            <li>
+                                <i class="las la-stopwatch"></i>
+                                Recogida puntual
+                            </li>
+                            <li>
+                                <i class="las la-compass"></i>
+                                Destino en tu terminal
+                            </li>
+                            <li>
+                                <i class="las la-suitcase"></i>
+                                Carga de equipaje
+                            </li>
+                        </ul>
+                    <footer><button>¡Lo quiero!</button></footer>
+                </article>
+                <article class="servicio-carta servicio2">
+                    <header>
+                        <i class="las la-car"></i>
+                        <h2>Alquila un coche o una moto</h2>
+                    </header>
+                    <ul class="servicios-list">
+                        <li>
+                            <i class="las la-stopwatch"></i>
+                            Tiempo ilimitado</li>
+                        <li>
+                            <i class="las la-compass"></i>
+                            Adaptable al destino</li>
+                        <li>
+                            <i class="las la-suitcase"></i>
+                            Espacio para equipaje</li>
+                    </ul>
+                    <footer><button>¡Lo quiero!</button></footer>
+                </article>
+            </section><!-- Fin de caracteristicas de los servicios ofrecidos  -->
+           
+
+             <!-- GALERIA CON MEJORES SITIOS PARA VIAJAR -->
+             <section class="galeria">
+                    <header><h2>Nuestros destinos más demandados</h2></header>
+                    <article class="tarjeta-galeria">
+                        <header><h3>Nueva York</h3><em>La ciudad que nunca duerme</em> </header> 
+                        <picture>
+                            <source srcset="./resources/img/newyork.jpg" media="(min-width:300px)">
+                            <img src="./resources/img/newyork.jpg" alt="">
+                        </picture>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam hic quibusdam dolores consequatur. </p>
+                        <footer><button>Reservar</button></footer>
+                        
+                    </article>
+                    <article class="tarjeta-galeria">
+                        <header><h3>Berlín</h3><em>La ciudad más diversa</em></header>
+                        <picture>
+                            <source srcset="./resources/img/berlin.jpg" media="(min-width:300px)">
+                            <img src="./resources/img/berlin.jpg" alt="">
+                        </picture>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente ipsam, tempora neque quos ea.</p>
+                        <footer><button>Reservar</button></footer>
+                    </article>
+                    <article class="tarjeta-galeria">
+                        <header><h3>Canarias</h3><em>El paraíso de Europa</em></header>
+                        <picture>
+                            <source srcset="./resources/img/tenerife.jpg" media="(min-width:300px)">
+                            <img src="./resources/img/tenerife.jpg" alt="">
+                        </picture>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta deserunt veniam beatae nesciunt dol!</p>
+                        <footer><button>Reservar</button></footer>
+                    </article>
+                    <article class="tarjeta-galeria">
+                        <header><h3>Amsterdan</h3><em>La ciudad navegable</em></header>
+                        <picture>
+                            <source srcset="./resources/img/amsterdan.jpg" media="(min-width:300px)">
+                            <img src="./resources/img/amsterdan.jpg" alt="">
+                        </picture>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa tenetur quo earum officia dicta .</p>
+                        <footer><button>Reservar</button></footer>
+                    </article> 
+            </section><!-- Fin de galeria de destinos mas visitados -->
+
+            <!-- REGISTRO EN LA ENTIDAD COMO NUEVO USUARIO -->
+           
+
+            <section class="contenedor-tarjetaRegistro">
+                <div class="area-tarjeta">
+                    <div class="tarjeta">
+                        <div class="tarjeta-front">
+                            <header><h2>Registrate en nuestra compañía</h2></header>
+                            <p><em>Coloca el cursor encima de la tarjeta para poder registrarte</em></p>
+                        </div>
+                        <div class="tarjeta-back">
+                            <form method="post">
+                                <label id="email-label" for="email">Email de contacto: </label>
+                                <input type="email" id="email" placeholder="me@example.com" required>
+                                <input type="checkbox" id="politica">
+                                <label id="texto-politica" for="politica">Sí, aceptas nuestra <a href="#">Politica de privacidad</a></label>
+                                <button type="submit">Dame de alta</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                  
+            </section><!-- fin de registro de nuevo usuario -->
+        </main>
+
+         <footer>
+            <nav>
+                <ul class="lista-footer">
+                    <li>Sobre nosotros</li>
+                    <li>Nota Legal</li>
+                    <li>Ayuda y contacto</li>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                </ul>
+            </nav>
+            
+            <div class="copyRight">
+                <p>Copyright &copy; Michael Laudrup Luis González</p>
+            </div>
+
+        </footer>
+        
+
+        <section style="display:none" id="cookie-message" class="cookie">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, explicabo quaerat.
+            <button onclick=hideCookie()>Acepto cookies</button>
+        </section>
+        
+        <script src="./js/script.js"></script>
+    </body>
+</html>

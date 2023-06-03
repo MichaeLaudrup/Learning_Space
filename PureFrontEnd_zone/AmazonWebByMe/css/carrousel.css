@@ -1,0 +1,65 @@
+.carrousel {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position:relative;  
+}
+
+.slider-headband {
+    display: flex;
+    transition: transform .5s ease-in-out;
+}
+
+.slider {
+    flex: 1 0 100%; 
+    cursor:pointer;
+
+    
+}
+
+.carrousel img {
+    display:block; 
+    width: 100%;
+    
+}
+
+.navigation-arrow {
+    position:absolute; 
+    color:white; 
+    z-index: 1;
+    font-size: 4rem;
+    display: inline-block;
+    height: 41.5%;
+    display:flex; 
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent; 
+
+}
+
+.navigation-arrow:active {
+    border-radius: 3px;
+    outline: none;
+    border: 2px solid white; 
+}
+
+.navigation-to-right {
+    right: 0;
+}
+
+
+/* MOVIMIENTO SLIDER */
+
+.slider-1-active{
+    transform: translateX(0%);
+}
+
+
+.slider-2-active{
+    transform: translateX(-100%);
+}
+
+.slider-3-active{
+    transform: translateX(-200%);
+}

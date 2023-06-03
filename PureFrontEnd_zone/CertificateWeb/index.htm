@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Get your certificate</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="A web site to obtain your own certificate">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="A simple HTML5 Template for new projects.">
+  <meta property="og:image" content="image.png">
+
+  <!-- link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+    <div class="global-container">
+       
+        <div class="form-container">
+            <div class="brand">
+                <img src="./logo.png" alt="" width="100px" height="100px">
+                <h1>Alejandría Academy</h1>
+            </div>
+            <form class="form-itself">
+                <label for="name">Nombre completo</label>
+                <input id="name" type="text" required>
+                <label for="lastName">Apellidos</label>
+                <input id="lastName" type="text" required>
+                <label for="date">Fecha de expedición</label>
+                <input id="expedition_date" type="date" required>
+                <button onclick="event.preventDefault();getDataAndMove(this)">Obtener certificado</button>
+            </form>
+            <div class="line-set">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+                <span class="line line4"></span>
+                <span class="line line5"></span>
+                <span class="line line6"></span>
+            </div>
+        </div>
+        
+
+
+        <div class="certificate-container">
+            <div class="certificate">
+                <div class="certificate-content">
+                    <div class="certificate-brand">
+                        <img src="./logo.png" alt="" width="125px" height="125px">
+                        <h2>Alejandría Academy</h2>
+                    </div>
+                    <p class="soft-gray upper">Certifica la finalización del curso </p>
+                    <h2 class="certificate-title">Fundamentos de inteligencia Artificial: Una aproximación a las redes neuronales.</h2>
+                    <p class="soft-gray upper">por parte del alumno </p>
+                    <span id="certificate-name">Michael Laudrup luis González</span>
+                    <p ><span class="soft-gray">con una duración de</span>  <span> 250 horas </span></p>
+                    <p><span class="soft-gray">Instructores: </span> <span>Margaret Lavariel, Jonas Schedemmant</span></p>
+                    <p><span class="soft-gray"> Fecha finalización: </span> <span id="certificate-date">12 de diciembre de 2012</span></p>
+                    <div class="signature">
+                        <span soft-gray>Firma tutor: </span>
+                        <img src="./signature.png" alt="signature" width="125px" height="125px">
+                    </div>
+                    
+                    <div class="credentials soft-gray ">
+                        <p>Número de certificado: UC.3434h343j-54kjk-432k34j-34324j324jk3h2k</p>
+                        <p>URL de certificado: alejandria.academy.com/UC.3434h343j-54kjk-432k34j-34324j324jk3h2k</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    
+    
+
+    
+  <script src="js/scripts.js"></script>
+</body>
+</html>

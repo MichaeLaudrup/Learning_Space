@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        form .form-box:nth-child(odd) input {
+            outline: none;
+        }
+        
+        form .form-box span {
+            display: inline-block;
+            min-width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="form-box">
+            <span>Nombre</span><input type="text">
+        </div>
+        <div class="form-box">
+            <span>Domicilio</span><input type="text">
+        </div>
+        <div class="form-box">
+            <span style="background-color: rgb(41, 41, 41);">Apellidos</span><input type="text" tabindex="-1">
+        </div>
+        <div class="form-box">
+            <span>Email</span><input type="text" tabindex="-1">
+        </div>
+
+        <div class="form-box">
+            <span>Codigo postal</span><input type="text" tabindex="1">
+        </div>
+
+        <div class="form-box">
+            <span>Edad</span><input type="text" tabindex="2">
+        </div>
+
+        <button type="submit" tabindex="2">Submit</button>
+
+
+    </form>
+</body>
+
+</html>

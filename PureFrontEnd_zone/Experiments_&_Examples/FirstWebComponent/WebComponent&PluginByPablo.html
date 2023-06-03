@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+        <title>Certificado de Edison EdBlocks</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gluten:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Redacted+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+           :root        { --fg: #ffffff; --bg: #001e42; --csuccess: #04a904; --cerror: #8f0a0a }
+           test-assert  { display: block; padding: 0; }
+           h1           { color: var(--bg); font-family: 'Exo', sans-serif; padding: 0 5px; font-size: 1.5rem; text-align: center; }
+           h2           { background: var(--bg); color: var(--fg); font-family: 'Exo', sans-serif; padding: 0 5px; font-size: 1.3rem; }
+           header img   { width: 100%; height: 100vh; object-fit: cover; position: fixed; left: 0; top: 0; z-index: -1; opacity: 0.03; }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://cdn.pixabay.com/photo/2021/05/30/16/02/pencil-6296276_960_720.jpg" />
+        </header>
+        <main>
+            <h1>Testing Tool 1.0</h1>
+        </main>
+    </body>
+
+    <script type="text/javascript">
+        /* ********************* */
+        /* DEFINICIÓN DEL PLUGIN */
+        /* ********************* */
+
+
+        const _ = function (fn){  //El plug-in es identificado como "_
+            _.fn = fn;  //Se inserta como atributo "fn" del plugin a lo que se recibe para construirlo
+            _.fnExists = true; //Se parte de la premisa de que la funcion pasada como parametro es verdadera
+
+            try{
+                //No se deberia usar eval por razones de seguridad
+                //Ejecuta la funcion recibida como parametro y comprueba en esa ejecucion cuantos parametros formales tienes [ REVISAR ] y los almacena
+                eval('_.paramsExpected = ' + eval('_.paramsExpected = "' + (_.fn.toString().split("(")[0] + '.toString()') + '";') + ';');
+
+                _.paramsExpected = _.paramsExpected.match(/\((.*)\)/)[0].trim().replace(/[\(\)]/g, '').split(',').length
+                
+                //
+                _.paramsReceived = _.fn.toString().match(/\((.*)\)/)[0].trim().replace(/[\(\)]/g, '');
+                _.paramsReceived = _.paramsReceived == '' ? 0 : _.paramsReceived.split(',').length;
+
+                //Se almacena en params Expected el numero parametros formales
+                //Se almacena en params receiver el numero de parametros actuales
+            
+            } catch(e){ //caso en el que al ejectuar el eval de la linea 43 se produce error por lo que se deduce que no existe la funcion
+                _.fnExists = false;
+            }
+
+            return _;
+        }
+
+
+        /* INICIALIZACION DE VALORES DEL PLUGIN */
+        _.fn = null;
+        _.fnExists = true;
+        _.paramsExpected = 0;
+        _.paramsReceived = 0;
+        _.result = null;
+        _.passed = null;
+        _.lastFn = null;
+        _.lastParams = null;
+        _.lastExpected = null;
+        //MENSAJES ASOCIADOS A CADA TIPO DE TEST
+        _.messages = {
+            "strictEqual": "Es estrictamente igual a ",
+            "equal": "Es igual a ",
+            "noMissingParameters": "El número de parámetros es correcto",
+            "missingParameters": "Faltan {X} parámetros",
+            "exists": "El método existe",
+            "performance": "El tiempo de ejecución ha sido: "
+        };
+        _.version = "1.0b";
+        
+        _.setValues = function (params, expected) {
+            _.lastFn = typeof params == 'string' ? params : params.callee.name;
+            _.lastParams = typeof params == 'string' ? [] :Array.prototype.slice.call(params);
+            for(var i = 0; i < _.lastParams.length; i++){
+                if(typeof _.lastParams[i] == 'string') _.lastParams[i] = '"' + _.lastParams[i] + '"';
+            }
+            _.lastExpected = expected;
+        }
+
+        _.assert = {
+
+            /**
+             * Comprobar si el resultado es estrictamente idéntico, incluyendo su tipo
+             * @version: 1.0
+             * @author: Pablo E. Fernández (islavisual@gmail.com).
+             * @Copyright 2017-2021 Islavisual.
+             * @Last update: 14-12-2021
+            **/
+            strictEqual: function(expected){
+                eval('_.result = ' + _.fn + ';');
+                
+                _.setValues(arguments, expected);
+
+                if(_.result === expected){
+                    _.passed = true;
+
+                } else {
+                    _.passed = false;
+                }
+
+                return _;
+            },
+
+            /**
+             * Comprobar si el resultado es igual, con o sin transformación de tipos
+             * @version: 1.0
+             * @author: Pablo E. Fernández (islavisual@gmail.com).
+             * @Copyright 2017-2021 Islavisual.
+             * @Last update: 14-12-2021
+            **/
+            equal: function(expected){
+                eval('_.result = ' + _.fn + ';');
+
+                _.setValues(arguments, expected);
+
+                if(_.result == expected){
+                    _.passed = true;
+
+                } else {
+                    _.passed = false;
+                }
+
+                return _;
+            },
+
+            /**
+             * Comprobar si faltan parámetros a la llamada
+             * @version: 1.0
+             * @author: Pablo E. Fernández (islavisual@gmail.com).
+             * @Copyright 2017-2021 Islavisual.
+             * @Last update: 14-12-2021
+            **/
+            noMissingParameters: function (){
+                _.setValues(arguments, _.paramsReceived);
+
+                if(_.paramsReceived == _.paramsExpected){
+                    _.passed = true;
+
+                } else {
+                    _.passed = false;
+                }
+
+                return _;
+            },
+
+            /**
+             * Comprobar si existe la función llamada
+             * @version: 1.0
+             * @author: Pablo E. Fernández (islavisual@gmail.com).
+             * @Copyright 2017-2021 Islavisual.
+             * @Last update: 14-12-2021
+            **/
+            exists: function(){
+
+                _.setValues(arguments, true);
+
+                if(_.fnExists){
+                    _.passed = true;
+
+                } else {
+                    _.passed = false;
+                }
+
+                return _;
+            }
+        }
+
+        /**
+         * Obtener el rendimiento
+         * @version: 1.0
+         * @author: Pablo E. Fernández (islavisual@gmail.com).
+         * @Copyright 2017-2021 Islavisual.
+         * @Last update: 14-12-2021
+        **/
+        _.getPerformance = function(){
+            _.setValues('getPerformance', true);
+
+            var start = performance.now();
+            try{ eval(_.fn); } catch(e) {}
+            var end = performance.now();
+
+            _.passed = true
+            _.timeToExecute = end - start;
+
+            return _;
+        }
+
+        /**
+         * Mostrar los mensajes de éxito o fracaso
+         * @version: 1.0
+         * @author: Pablo E. Fernández (islavisual@gmail.com).
+         * @Copyright 2017-2021 Islavisual.
+         * @Last update: 14-12-2021
+        **/
+        _.out = function(){
+            var msg = '';
+            if(typeof this.passed == "string"){
+                msg = this.result;
+            } else {
+                switch(this.lastFn){
+                    case "noMissingParameters":
+                        if(this.paramsExpected - this.paramsReceived == 0){
+                            msg = this.messages[this.lastFn] + this.lastParams.join(',');
+                        } else {
+                            msg= this.messages['missingParameters'].replace('{X}', (this.paramsExpected - this.paramsReceived))
+                        }
+                        break;
+                    case "getPerformance":
+                        msg = this.messages['performance'] + _.timeToExecute + 'ms';
+                        break;
+                    default:
+                        msg = this.messages[this.lastFn] + this.lastParams.join(',');
+                }
+            }
+
+            var obj = document.createElement("test-assert");
+            obj.message = msg;
+            obj.type = this.passed ? "ok": "error";
+            obj.method = this.lastFn;
+
+            if((document.body.children[document.body.children.length-1]).tagName == "H2"){
+                document.body.insertAdjacentHTML("beforeend", '<section data-function="' + this.fn + '"></section>');
+            }
+
+            document.body.querySelector("section:last-child").insertAdjacentElement("beforeend", obj);
+        }
+        
+        /**
+         * Realizar todas las comprobaciones contempladas en este plugin
+         * @version: 1.0
+         * @param expected
+         * @param unexpected
+         * @author: Pablo E. Fernández (islavisual@gmail.com).
+         * @Copyright 2017-2021 Islavisual.
+         * @Last update: 14-12-2021
+        **/
+        _.test = function(expected, unexpected){
+            str ='<h2>Testando ' + _.fn + '</h2>';
+            document.body.insertAdjacentHTML("beforeend", str);
+
+            _(_.fn).assert.exists().out();
+            if(_.fnExists){
+                _(_.fn).getPerformance().out();
+                _(_.fn).assert.strictEqual(expected).out();
+                _(_.fn).assert.strictEqual(expected.toString()).out();
+                _(_.fn).assert.equal(expected).out();
+                _(_.fn).assert.equal(expected.toString()).out();
+                _(_.fn).assert.equal(unexpected).out();
+                _(_.fn).assert.noMissingParameters().out();
+            }
+        }
+
+        // Función de prueba
+        function suma(x, y){ return x + y }
+
+       /* var datos;
+        var getData = function (regex) {
+            var request = new XMLHttpRequest();
+            request.open('GET', `https://islavisual.com/api?q=${regex}&format=json&action=search`, true );
+            request.setRequestHeader("Content-type", "application/json; charset=utf-8");
+            request.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this)
+                    datos = JSON.parse(this.responseText);
+                    datos = datos.results[0].source.split('-')[0];
+                    console.log(datos);
+                }
+            };
+            
+            request.send();
+        }*/
+
+        /* ************* */
+        /* WEB COMPONENT */
+        /* ************* */
+        class TestFn extends HTMLElement {
+            constructor(){
+                super();
+                this._message = null;
+                this._type = null;
+                this._method = null;
+            }
+
+            connectedCallback() {
+                var shadowRoot = this.attachShadow({mode: 'open'});
+                shadowRoot.innerHTML = `<style>
+                    :host                       { --fg: #ffffff; --bg: #001e42; --csuccess: #04a904; --cerror: #8f0a0a }
+                    article div                 { border: 1px solid rgba(0,0,0,0.12); padding: 0; margin: 1px 0; }
+                    article div:nth-child(2n)   { background: rgba(0,0,0,0.06); }
+                    article div label           { display: inline-block; width: calc(100% - 38px); font-weight: 300; padding: 5px 0 5px 5px; }
+                    article div span            { display: inline-block; width: 28px; font-weight: 400; padding: 5px 0; border-right: 1px solid #ccc; background: var(--fg); color: var(--csuccess); }
+                    article span i              { display: inline-block; margin: 0 auto; text-align: center; width: 100%; padding: 0; }
+                    article div span.error      { background: var(--cerror); color: var(--fg); }
+                </style>
+                <article>
+                <div>
+                    <span ${this._type == 'error' ? 'class="error"' : '' }><i>${this.type == 'error' ? '🗙' : '✓'}</i></span>
+                    <label>${this._message}</label>
+                </div>
+                </article>`;
+
+                this._updateRendering();
+                
+            }
+            
+            static get observedAttributes() { return ["message", "type"]; }
+
+            attributeChangedCallback(attrName, oldValue, newValue) {
+                if(oldValue != newValue) this["_" + attrName] = newValue;
+                this._updateRendering();
+            }
+
+            disconnectedCallback() {
+                console.log(this, "fue elemento eliminado!");
+            }
+
+            get message() {
+                return this._message;
+            }
+
+            set message(v) {
+                if(v) this.setAttribute("message", v);
+            }
+
+            get method() {
+                return this._method;
+            }
+
+            set method(v) {
+                if(v) this.setAttribute("method", v);
+            }
+
+            get type() {
+                return this._type;
+            }
+
+            set type(v) {
+                if(v) this.setAttribute("type", v);
+            }
+            
+            _updateRendering() {
+                //console.log(this)
+            }
+        }
+
+        customElements.define("test-assert", TestFn);
+
+        /* ***************** */
+        /* PRUEBA DEL PLUGIN */
+        /* ***************** */
+        _('suma(3,5)').test(8, 5);
+        _('suma(3)').test(8, 5);
+        _('suma()').test(8, 5);
+        _('sum()').test(8, 5);
+    </script>
+</html>

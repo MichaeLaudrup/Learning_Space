@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang='en-UK'>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Michael Laudrup Luis González">
+        <!-- Importante: Tanto title como meta-description sirven para mejorar posicionamiento SEO -->
+        <meta name="description" content="This is a e-commerce web page proyect, which aims to sell differents technological products">
+        <title>Apolo's Technologies</title>
+        <!-- el meta keywords es ignorado por la ingenieria de busqueda por temas de mal uso en el pasado -->
+
+        <!-- TWITTER - CARDS : Para que los enlaces se vean en otros lugares con imagen y descripcion -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Apolo's Technologies">
+        <meta name="twitter:creator" content="Michael Laudrup Luis Gonzalez">
+        <meta name="twitter:description" content="This is a e-commerce web page proyect, which aims to sell differents technological products">
+        <meta name="twitter:img" content="./resources/mataimage.jpg">
+        <meta name="twitter:image:alt" content="In this image we can see a lapton with a electronic platform to draw electronicaly on some program of potography edition, a man is using this tools too ">
+        
+        <!--<meta http-equiv="refresh" content="30"> Especifica cada cuanto tiempo tiene que refrescarse la pagina en segundos -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- ¿Deberia seguir usandose -->
+
+        <!-- Muy importante: Esta linea debe incluirse siempre por temas de responsive en mobile, establece el zoom a 1-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <!-- MENU CABECERA -->
+            <!-- MENU CABECERA -->
+            <header> 
+                <nav class="main-nav-container">
+                    <div class="brand">
+                        <a href="index.htm">
+                            <h1 class="font-size-level1"><em>ApoloTech</em></h1>
+                        </a>
+                    </div>
+                    <ul class="navigation-links font-size-level1 ">
+                        <li> 
+                            <a class="main-nav-items" aria-label="click here to going to home page" href="index.htm"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" class="nav-icons" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="main-nav-items" aria-label="click here to going to shopping" href="./main-shop.htm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="nav-icons" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd" />
+                                </svg>
+                                Nuestra tienda
+                            </a>
+                        </li>
+                        <li>
+                            <a class="main-nav-items" aria-label="click here to going to your shopping cart" href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="nav-icons" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                                  </svg>
+                                Mi carrito
+                            </a>
+                        </li>
+                        <li>
+                            <a class="main-nav-items" aria-label="click here to going to contact us" href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="nav-icons" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+                                  </svg>
+                                Contáctanos
+                            </a>
+                         </li>        
+                    </ul>
+                    
+    
+                </nav>
+                <nav class="breadcrum">
+                    <ul class="breadcrum-list">
+                        <li><a href="index.htm"> Inicio </a> </li><span>>></span>
+                        <li><a href="./main-shop.htm"> Nuestra tienda </a> </li><span>>></span>
+                        <li><a href="#"> Smartphones </a></li>
+                    </ul>  
+                </nav> 
+            </header>
+        <main class="main-container-laptos"> 
+            <aside class="shadow vertical-menu">
+                <nav>
+                    <ul>
+                        <li><a href="portatiles.htm"> Portatiles</a></li>
+                        <li><a href="tvs.htm">  Televisores </a></li>
+                        <li class="actived"><a href="phones.htm">Smartphones</a></li>
+                        <li><a>Ofertas</a></li>
+                    </ul>
+                </nav>
+
+
+            </aside>
+            <section class="shopping-section hidden" >
+                <article>
+                    <header><h3>Móvil - Samsung Galaxy S21+ 5G, Violeta, 128 GB, 8 GB RAM, 6.7" Dynamic AMOLED 120Hz, Exynos 2100, 4800 mAh</h3></header>
+                    <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_84399793/mobile_200_200_png" alt="">
+                    <div class="item-content">
+                        <ul class="font-lv-3">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Tv</title><rect x="32" y="96" width="448" height="272" rx="32.14" ry="32.14" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M128 416h256"/></svg>
+                                Tamaño pantalla (cm/pulg): <span>39.62cm /15.6"</span></li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Hardware Chip</title><rect x="80" y="80" width="352" height="352" rx="48" ry="48" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="144" y="144" width="224" height="224" rx="16" ry="16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 80V48M336 80V48M176 80V48M256 464v-32M336 464v-32M176 464v-32M432 256h32M432 336h32M432 176h32M48 256h32M48 336h32M48 176h32"/></svg>
+                                Procesador: <span>Intel® Celeron® N4020</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Save</title><path d="M380.93 57.37A32 32 0 00358.3 48H94.22A46.21 46.21 0 0048 94.22v323.56A46.21 46.21 0 0094.22 464h323.56A46.36 46.36 0 00464 417.78V153.7a32 32 0 00-9.37-22.63zM256 416a64 64 0 1164-64 63.92 63.92 0 01-64 64zm48-224H112a16 16 0 01-16-16v-64a16 16 0 0116-16h192a16 16 0 0116 16v64a16 16 0 01-16 16z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                Tipo de RAM: <span>Tipo de RAM</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Resize</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M304 96h112v112M405.77 106.2L111.98 400.02M208 416H96V304"/></svg> 
+                                Tamaño de memoria RAM: 
+                                <span>DDR4</span>
+                            </li>
+                        </ul> 
+                        
+                    </div>
+                    <span class="price font-size-level0">1.245€</span>
+                    <footer><button class="price font-size-level0">Comprar</button></footer>
+                </article>
+                <article>
+                    <header><h3>Portátil - HP Laptop 14s-dq2000ns, 14" FHD, Intel® Core™ i3-1115G4, 8GB, 256GB SSD, UHD Graphics, W10H, Plata</h3></header>
+                    <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_87137470/mobile_200_200_png" alt="">
+                    <div class="item-content">
+                        <ul class="font-lv-3">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Tv</title><rect x="32" y="96" width="448" height="272" rx="32.14" ry="32.14" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M128 416h256"/></svg>
+                                Tamaño pantalla (cm/pulg): <span>39.62cm /15.6"</span></li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Hardware Chip</title><rect x="80" y="80" width="352" height="352" rx="48" ry="48" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="144" y="144" width="224" height="224" rx="16" ry="16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 80V48M336 80V48M176 80V48M256 464v-32M336 464v-32M176 464v-32M432 256h32M432 336h32M432 176h32M48 256h32M48 336h32M48 176h32"/></svg>
+                                Procesador: <span>Intel® Celeron® N4020</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Save</title><path d="M380.93 57.37A32 32 0 00358.3 48H94.22A46.21 46.21 0 0048 94.22v323.56A46.21 46.21 0 0094.22 464h323.56A46.36 46.36 0 00464 417.78V153.7a32 32 0 00-9.37-22.63zM256 416a64 64 0 1164-64 63.92 63.92 0 01-64 64zm48-224H112a16 16 0 01-16-16v-64a16 16 0 0116-16h192a16 16 0 0116 16v64a16 16 0 01-16 16z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                Tipo de RAM: <span>Tipo de RAM</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Resize</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M304 96h112v112M405.77 106.2L111.98 400.02M208 416H96V304"/></svg> 
+                                Tamaño de memoria RAM: 
+                                <span>DDR4</span>
+                            </li>
+                        </ul> 
+                        
+                    </div>
+                    <span class="price font-size-level0">1.245€</span>
+                    <footer><button class="price font-size-level0">Comprar</button></footer>
+                </article>
+                <article>
+                    <header><h3>Portátil - Lenovo V15 ADA, 15.6" FHD, AMD Ryzen 3 3250U, 8 GB RAM, 256 GB SSD, AMD Radeon™ Graphics, FreeDOS</h3></header>
+                    <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_86320968/mobile_200_200_png" alt="">
+                    <div class="item-content">
+                        <ul class="font-lv-3">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Tv</title><rect x="32" y="96" width="448" height="272" rx="32.14" ry="32.14" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M128 416h256"/></svg>
+                                Tamaño pantalla (cm/pulg): <span>39.62cm /15.6"</span></li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Hardware Chip</title><rect x="80" y="80" width="352" height="352" rx="48" ry="48" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="144" y="144" width="224" height="224" rx="16" ry="16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 80V48M336 80V48M176 80V48M256 464v-32M336 464v-32M176 464v-32M432 256h32M432 336h32M432 176h32M48 256h32M48 336h32M48 176h32"/></svg>
+                                Procesador: <span>Intel® Celeron® N4020</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Save</title><path d="M380.93 57.37A32 32 0 00358.3 48H94.22A46.21 46.21 0 0048 94.22v323.56A46.21 46.21 0 0094.22 464h323.56A46.36 46.36 0 00464 417.78V153.7a32 32 0 00-9.37-22.63zM256 416a64 64 0 1164-64 63.92 63.92 0 01-64 64zm48-224H112a16 16 0 01-16-16v-64a16 16 0 0116-16h192a16 16 0 0116 16v64a16 16 0 01-16 16z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                Tipo de RAM: <span>Tipo de RAM</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Resize</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M304 96h112v112M405.77 106.2L111.98 400.02M208 416H96V304"/></svg> 
+                                Tamaño de memoria RAM: 
+                                <span>DDR4</span>
+                            </li>
+                        </ul> 
+                        
+                    </div>
+                    <span class="price font-size-level0">1.245€</span>
+                    <footer><button class="price font-size-level0">Comprar</button></footer>
+                </article>
+                <article>
+                    <header><h3>Portátil - Huawei MateBook D 15 2021, Intel® Core™ i5-1135G7, 8GB+512GB, Intel® Iris® Xe, Windows 10, Plata</h3></header>
+                    <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_85685976/mobile_200_200_png" alt="">
+                    <div class="item-content">
+                        <ul class="font-lv-3">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Tv</title><rect x="32" y="96" width="448" height="272" rx="32.14" ry="32.14" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M128 416h256"/></svg>
+                                Tamaño pantalla (cm/pulg): <span>39.62cm /15.6"</span></li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Hardware Chip</title><rect x="80" y="80" width="352" height="352" rx="48" ry="48" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="144" y="144" width="224" height="224" rx="16" ry="16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 80V48M336 80V48M176 80V48M256 464v-32M336 464v-32M176 464v-32M432 256h32M432 336h32M432 176h32M48 256h32M48 336h32M48 176h32"/></svg>
+                                Procesador: <span>Intel® Celeron® N4020</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Save</title><path d="M380.93 57.37A32 32 0 00358.3 48H94.22A46.21 46.21 0 0048 94.22v323.56A46.21 46.21 0 0094.22 464h323.56A46.36 46.36 0 00464 417.78V153.7a32 32 0 00-9.37-22.63zM256 416a64 64 0 1164-64 63.92 63.92 0 01-64 64zm48-224H112a16 16 0 01-16-16v-64a16 16 0 0116-16h192a16 16 0 0116 16v64a16 16 0 01-16 16z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                Tipo de RAM: <span>Tipo de RAM</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Resize</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M304 96h112v112M405.77 106.2L111.98 400.02M208 416H96V304"/></svg> 
+                                Tamaño de memoria RAM: 
+                                <span>DDR4</span>
+                            </li>
+                        </ul> 
+                        
+                    </div>
+                    <span class="price font-size-level0">1.245€</span>
+                    <footer><button class="price font-size-level0">Comprar</button></footer>
+                </article>
+                <article>
+                    <header><h3>Portátil - Lenovo IdeaPad 3 15IGL05, 15.6" FHD, Intel® Celeron® N4020, 8GB RAM, 256GB SSD, UHD 600, FDOS</h3></header>
+                    <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_86420781/mobile_200_200_png" alt="">
+                    <div class="item-content">
+                        <ul class="font-lv-3">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Tv</title><rect x="32" y="96" width="448" height="272" rx="32.14" ry="32.14" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M128 416h256"/></svg>
+                                Tamaño pantalla (cm/pulg): <span>39.62cm /15.6"</span></li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Hardware Chip</title><rect x="80" y="80" width="352" height="352" rx="48" ry="48" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="144" y="144" width="224" height="224" rx="16" ry="16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 80V48M336 80V48M176 80V48M256 464v-32M336 464v-32M176 464v-32M432 256h32M432 336h32M432 176h32M48 256h32M48 336h32M48 176h32"/></svg>
+                                Procesador: <span>Intel® Celeron® N4020</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Save</title><path d="M380.93 57.37A32 32 0 00358.3 48H94.22A46.21 46.21 0 0048 94.22v323.56A46.21 46.21 0 0094.22 464h323.56A46.36 46.36 0 00464 417.78V153.7a32 32 0 00-9.37-22.63zM256 416a64 64 0 1164-64 63.92 63.92 0 01-64 64zm48-224H112a16 16 0 01-16-16v-64a16 16 0 0116-16h192a16 16 0 0116 16v64a16 16 0 01-16 16z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                Tipo de RAM: <span>Tipo de RAM</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="list-features-icon" viewBox="0 0 512 512"><title>Resize</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M304 96h112v112M405.77 106.2L111.98 400.02M208 416H96V304"/></svg> 
+                                Tamaño de memoria RAM: 
+                                <span>DDR4</span>
+                            </li>
+                        </ul> 
+                        
+                    </div>
+                    <span class="price font-size-level0">1.245€</span>
+                    <footer><button class="price font-size-level0">Comprar</button></footer>
+                </article>
+            </section>
+            <section class="spinner">
+                <span class="rect-1"> </span>
+                <span class="rect-2"></span>
+                <span class="rect-4"></span>
+                <span class="rect-3"></span>
+                <p class="spinner-text">Espere un momento...</p>
+            </section>
+        </main>
+        <!-- PIE DE PAGINA WEB -->
+       <!-- PIE DE PAGINA WEB -->
+       <footer class="prim-bg main-footer font-color-primary">
+        Copyright &copy;  Michael Laudrup Luis Gonzalez
+    </footer> 
+        <script src="./js/script.js"></script> 
+    </body>
+</html>
