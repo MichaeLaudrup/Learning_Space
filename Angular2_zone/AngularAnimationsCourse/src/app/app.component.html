@@ -1,0 +1,25 @@
+
+
+<header class="app-header">
+  <nav class="header__nav">
+    <ul class="app-header__list">
+      <ng-container *ngFor=" let subProject of appSubProjects">
+        <li class="app-header__list-item">
+          <a [href]="subProject.link">
+            {{ subProject.title | uppercase}}
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+</header>
+<div class="dinamic-content container">
+  <div class="row">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<footer class="app-footer">
+  <p>Autor: michael Laudrup</p>
+</footer>

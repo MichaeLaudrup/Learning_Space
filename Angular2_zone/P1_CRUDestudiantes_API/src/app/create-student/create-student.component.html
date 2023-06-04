@@ -1,0 +1,19 @@
+ <div id="form-container">
+    <h1 style="text-align: center;">New Student</h1>
+    <form class="mat-elevation-z8">
+        <div class="form-group" >
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name"
+                   required
+                   [(ngModel)]="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="email" name="email">
+        </div>
+        <button type="button" class="btn btn-outline-primary" (click)="saveNewStudent()">Save it!</button>
+    </form>   
+</div> 
+
+
+

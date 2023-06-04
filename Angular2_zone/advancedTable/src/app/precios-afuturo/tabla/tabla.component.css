@@ -1,0 +1,336 @@
+.table-container {
+    padding: 2.3rem var(--lateral-app-padding) 7rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.green-header-cell {
+    background: linear-gradient(0deg, #c4f1ce, #b4e1bc);
+}
+
+.blue-header-cell {
+    background: linear-gradient(0deg, #c4d0f1, #b4c6e1);
+}
+
+.orange-header-cell {
+    background: linear-gradient(0deg, #ffcf63, #efbf53);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* 
+    Document   : common
+    Created on : 28/02/2012, 11:01:35 AM
+    Author     : Simon Elvery
+*/
+
+#no-more-tables {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+table {
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+    border-spacing: 0;
+}
+
+td {
+    font-weight: 400 !important;
+}
+
+td,
+th {
+    text-align: left;
+}
+
+td.numeric,
+th.numeric {
+    text-align: right;
+}
+
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+    background-color: #f9f9f9;
+}
+
+.table-condensed th,
+.table-condensed td {
+    padding: 4px 5px;
+    white-space: nowrap;
+}
+
+
+/* 
+    Document   : unseen
+    Created on : 28/02/2012, 11:01:35 AM
+    Author     : Simon Elvery
+    Description: 
+		Demonstration of the responsive tables method described at 
+		http://www.irishstu.com/stublog/2011/12/13/tables-responsive-design-part-2-nchilds/
+		and
+		http://filamentgroup.com/lab/responsive_design_approach_for_complex_multicolumn_data_tables/
+*/
+
+.menos-de-800px,
+.menos-de-640px {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    #unseen table td:nth-child(2) {
+        display: none;
+    }
+    #unseen table th:nth-child(2) {
+        display: none;
+    }
+    .menos-de-800px {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #unseen table td:nth-child(4),
+    #unseen table th:nth-child(4),
+    #unseen table td:nth-child(7),
+    #unseen table th:nth-child(7),
+    #unseen table td:nth-child(8),
+    #unseen table th:nth-child(8) {
+        display: none;
+    }
+    .menos-de-640px {
+        display: inline;
+    }
+}
+
+
+/* 
+    Document   : no-more-tables
+    Created on : 28/02/2012, 11:01:54 AM
+    Author     : Simon Elvery
+    Description:
+        Demonstration of the responsive tables method described at by Chris Coyier
+		at http://css-tricks.com/responsive-data-tables/
+*/
+
+@media only screen and (max-width: 800px) {
+    /* Force table to not be like tables anymore */
+    #no-more-tables table,
+    #no-more-tables thead,
+    #no-more-tables tbody,
+    #no-more-tables th,
+    #no-more-tables td,
+    #no-more-tables tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        max-height: 90vw;
+    }
+    #no-more-tables tr {
+        position: relative;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+    }
+    #no-more-tables tr::before {
+        content: 'Registro ' attr(aria-rowindex);
+        display: block;
+        color: white;
+        background-color: black;
+        padding: .5rem;
+        padding-right: 1rem;
+        text-align: right;
+    }
+    #no-more-tables td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding: 35px 0px 10px 10px;
+        white-space: normal;
+        text-align: left;
+    }
+    #no-more-tables td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+    /*
+	Label the data
+	*/
+    #no-more-tables td:before {
+        content: attr(data-title);
+    }
+}
+
+
+/* very rough approximation of the 2 column style from CSS Tricks
+ * with DTs in place of generated content 
+ *
+ * for the very lowest case that doesn't even understand CSS, browser
+ * default definition lists will be displayed. assuming at least very
+ * basic CSS support we can dress it up a bit.
+ */
+
+#arixic {
+    font-size: 13px;
+}
+
+#arixic dt,
+#arixic dd {
+    margin: 0;
+    padding: 0;
+    width: 49%;
+    float: left;
+}
+
+
+/* this is pretty advanced CSS striaght from the CSS Tricks article
+ * but since we're in the style block aimed at our simplest devices
+ * we may wanna find a simpler way to pull off a visual cue from 
+ * one DL to the next. or maybe we don't worry about it.
+ */
+
+#arixic dl:nth-of-type(odd) dt,
+#arixic dl:nth-of-type(odd) dd {
+    background: #eee;
+}
+
+
+/* we have to clone the 1st DL element since it contains 2 rows of
+ * data for our faux table. ideally .clone should be generated via 
+ * js only as needed rather than in the actual markup. since i'm a 
+ * cheap hack we'll hide it like this instead.
+ */
+
+#arixic .clone {
+    display: none;
+}
+
+
+/* seo friendly tables */
+
+.table {
+    display: table;
+    /* Defines a Table */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-bottom: 2px solid #dddddd;
+    color: #8d8d8d;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.table-head {
+    display: table-header-group;
+    /* Defines a table header group */
+}
+
+.table-head .column {
+    /* Column inside the table-head */
+    background: #333333;
+    color: white;
+    border-right: 1px solid #5d5d5d;
+    border-bottom: none;
+}
+
+.table-head .column:hover {
+    /* Column hover inside the table-head */
+    background: #222222;
+}
+
+.row {
+    display: table-row;
+    /* Defines a table row */
+}
+
+.row .column:nth-child(1) {
+    /* First column in a row */
+    border-left: 1px solid #eeeeee;
+}
+
+.row:last-child .column {
+    /* column in a last row */
+    border-bottom: none;
+}
+
+.column {
+    display: table-cell;
+    /* Defines a table cell */
+    padding: 10px 20px;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+
+.column:hover {
+    background: #f9f9f9;
+}
+
+
+/* Responsive table */
+
+@media all and (max-width: 800px) {
+    .table,
+    .row,
+    .column,
+    .column:before {
+        display: block;
+        /* Converts a table, table row, table column and table column:before into a block element */
+    }
+    .table,
+    .row .column:last-child {
+        border-bottom: none;
+    }
+    .table-head {
+        position: absolute;
+        /* Hides table head but not using display none */
+        top: -1000em;
+        left: -1000em;
+    }
+    .row {
+        border: 1px solid #eeeeee;
+        border-top: 2px solid #dddddd;
+        border-bottom: 2px solid #dddddd;
+        margin: 20px 0;
+    }
+    .row .column:nth-child(1) {
+        /* first column of the row */
+        border-left: none;
+    }
+    .row .column:last-child {
+        /* last column of the row */
+        border-right: none;
+    }
+    .row:last-child .column,
+    .column {
+        /* Column in the last row and column */
+        border-bottom: 1px solid #eeeeee;
+    }
+    .column:before {
+        /* prints the value of data-label attribute before the column data */
+        font-weight: bold;
+        padding-right: 20px;
+        font-size: 12px;
+        content: " "attr(data-label)" //";
+        /* call the attribute value of data-label and adds a string // */
+    }
+}

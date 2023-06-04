@@ -1,0 +1,9 @@
+<li [ngClass]="{'completed': tarea.completado, 'editing': modoEditando}" (dblclick)="doubleClickTrigger()">
+    <div class="view">
+        <input class="toggle" type="checkbox" [formControl]="chkCompletado">
+        <label>{{ tarea.texto}}
+        </label>
+        <button class="destroy" (click)="eliminarTarea()"></button>
+    </div>
+    <input (blur)="terminarEdicion()" type="text" class="edit" value="Create a TodoMVC template" [formControl]="txtInput" #inputTxt>
+</li>

@@ -1,0 +1,89 @@
+<div class="row">
+    <div class="col-6">
+        <div class="card card-statistics">
+            <div class="card-body">
+
+                <div class="clearfix">
+                    <div class="float-left">
+                        <i class="fa fa-money-bill-alt text-success icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                        <p class="mb-0 text-right">Ingresos</p>
+                        <div class="fluid-container">
+                            <h3 class="font-weight-medium text-right mb-0">{{ sumaIngresos | currency}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted mt-3 mb-0">
+                    <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> El {{ porcentajeIngresos | percent:'2.2-2'}} de las transacciones son ingresos
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card card-statistics">
+            <div class="card-body">
+
+                <div class="clearfix">
+                    <div class="float-left">
+                        <i class="fa fa-shipping-fast text-danger icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                        <p class="mb-0 text-right">Gastos</p>
+                        <div class="fluid-container">
+                            <h3 class="font-weight-medium text-right mb-0">{{ sumaGastos | currency}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted mt-3 mb-0">
+                    <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> El {{ porcentajeGastos | percent:'2.2-2'}} de las transacciones son gastos
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row m-5">
+
+    <div class="col-12">
+        <div class="card card-statistics">
+            <div class="card-body">
+
+                <div class="clearfix">
+                    <div class="float-left">
+                        <i class="fa fa-building text-info icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                        <p class="mb-0 text-right">Diferencia</p>
+                        <div class="fluid-container">
+                            <h3 [ngClass]="{
+                        'text-success': sumaIngresos - sumaGastos > 0,
+                        'text-danger': sumaIngresos - sumaGastos < 0
+                      }" class="font-weight-medium text-right mb-0">
+                                {{ sumaIngresos - sumaGastos | currency }}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 p-5" *ngIf="sumaIngresos > 0 || sumaGastos > 0">
+        <div class="card card-statistics">
+            <div class="card-body" style="display:flex; justify-content: center; align-items: center; flex-direction: column;">
+                <h1 class="card-title" style="font-size: 2rem;">Grafica</h1>
+
+                <div style="display: block; width: 300px;">
+                    <canvas baseChart [data]="doughnutChartData" [type]="doughnutChartType">
+                    </canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

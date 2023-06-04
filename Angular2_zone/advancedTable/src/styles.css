@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    padding: 1rem 0rem;
+}
+
+:root {
+    --color-principal: rgb(32, 168, 103);
+    --color-principal-oscuro: rgb(12, 148, 83);
+    --lateral-app-padding: 4rem;
+}
+
+@media screen and (max-width: 850px) {
+     :root {
+        --lateral-app-padding: 2rem;
+    }
+}

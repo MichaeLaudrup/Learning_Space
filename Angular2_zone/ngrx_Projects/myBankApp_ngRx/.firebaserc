@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "banca-app"
+  },
+  "targets": {
+    "banca-app": {
+      "hosting": {
+        "myBankApp_ngRx": [
+          "banca-app"
+        ]
+      }
+    }
+  }
+}

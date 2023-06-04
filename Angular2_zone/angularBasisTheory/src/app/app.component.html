@@ -1,0 +1,55 @@
+
+<h1>{{title}}</h1>
+<p>En este proyecto se contemplarán los aspectos fundamentales de Angular</p>
+<hr>
+<div class="theory">
+  <h2>¿Como puedo crear un componente?</h2>
+  <h3>De manera manual</h3>
+  <ol>
+    <li>Crear una carpeta dentro de la carpeta "app" con el nombre de tu component [Es una buena praxis utilizar el nombre del componente].</li>
+    <li>Dentro de la carpeta de nuestro nuevo component creamos un archivo "nombreNuestroComponente.component.ts": este archivo es la configuración en código typeScript de nuestro componente
+      dentro de este archivo hay que exportar una clase que tenga como nombre "nombreNuestroComponenteComponent", para informar a angular de que esta clase es un componente se usa
+      @Component , la cual se debe importar del paquete  @angular/core, esta etiqueta "@component" contiene un objeto java con las siguientes propiedades:
+      <ol>
+        <li>"selector: " -> Un selector, que permite inscrutarlo en html clasico como si fuera un tag. Hay que reseñar que hay 3 tipos de selectores
+          uno es el selector clasico entre corchetes angulares como si fuera un elemento html para eso se pone solo el nombre del componente <pre>selector:'app-server'</pre>
+          también esta el selector por atributo <pre>selector: '[app-server]' </pre>, en este caso el componente se asignara a un elemento html si aparece app-server como atributo
+          en un div u otro elemento, por ejemplo <pre> &lt;div app-server&gt;  &lt;/div&gt;</pre>, finalmente tenemos el selector por clase <pre>selector: '.app-server'</pre> todo elemento que tenga la clase "app-server" sera tratada como un componente
+        </li>
+        <li>"templateUrl: " -> Una url que sirve para indicar donde esta la marca html que es como la plantilla</li>
+        
+      </ol>
+      <pre>Ejemplo
+        @Component(&lbrace; 
+            selector: 'app-server',
+            templateUrl: './server.component.html'
+        &rbrace;)
+        export class ServerComponent &lbrace;
+
+        &rbrace;
+      </pre>
+    <li>Insertar en el archivo app.component.ts en la propiedad "declarations" el bombre del nuevo component e importar el modulo en este mismo archivo @import "nuestroComponente" from "localizacion clase componente"</li>
+  </ol>
+
+  <hr>
+  <h2>Vinculación de datos entre markup HTML y archivo typescript asociado</h2>
+  <ul>
+    <li>String iterpolation (Salida de datos <strong>desde el typescript hacia el HTML template</strong> ): Entre llaves se puede poner directamente una variable del typescript asociado al componente
+      o se puede poner expresiones que terminen devolviendo un String o incluso metodos, con la condición de que devuelvan siempre un String <pre>     &lbrace; &lbrace; variable de typeScript &rbrace; &rbrace; </pre>
+    </li>
+    <li>Vinculación por propiedad o property biding(Salida de datos <strong>desde el typescript hacia el HTML template</strong> ): En una elemento html se pone entre corchetes rectangulares un determinado atributo, esto indica que el valor de ese atributo
+      esta directamente vinculado a una determinada variable del typescript asociado al componente. De tal forma que si cambia el valor de esa variable en el typeScript en cualquier
+      momento, también se cambiara en el HTML
+    </li>
+    <li>
+      Event binding: Vinculación de evento
+    </li>
+    </ul>
+
+<hr>
+
+
+<app-servers></app-servers>
+<hr>
+<app-directive-exercise></app-directive-exercise>
+

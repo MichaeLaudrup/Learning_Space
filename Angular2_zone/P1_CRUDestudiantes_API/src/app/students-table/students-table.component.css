@@ -1,0 +1,61 @@
+table {
+    width: 80%;
+    margin-bottom: 2%;
+    background-color: rgb(72, 97, 143);
+}
+
+.table-container{
+    display:grid; 
+    justify-items: center;
+}
+mat-form-field{
+    margin-top:2%;
+    width: 80%;
+}
+.columnTitle{
+   font-size: 1.8vw; 
+   color:white; 
+}
+.mat-row:hover .mat-cell {
+    background-color: #7395c2;
+  }
+
+
+mat-icon{
+    color:red;
+    font-size:1.7vw; 
+    
+}
+
+mat-icon:hover {
+    color:white !important; 
+    
+}
+.mat-column-delete{
+    width: 8%;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.mat-column-edit{
+    width: 8%;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.mat-column-name{
+    width: 30%;
+    font-size: 1.3vw;
+}
+.mat-column-email{
+    width: 30%;
+    font-size: 1.3vw;
+}
+
+.mat-column-id{
+    font-size:1.3vw;
+}
+
+.mat-column-disabled{
+    font-size: 1.3vw;
+}

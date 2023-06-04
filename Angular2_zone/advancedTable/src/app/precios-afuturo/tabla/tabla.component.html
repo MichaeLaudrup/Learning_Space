@@ -1,0 +1,138 @@
+<div class="table-container">
+    <span style="display:flex; align-items: center; justify-content: flex-end; padding:.75rem 0; gap:1rem" (click)="toExcel()"> Exportar a: <i style="font-size: 2rem; color:green; cursor: pointer;" class="las la-file-excel" ></i></span>
+    <section id="no-more-tables">
+        <table class="table-bordered table-striped table-condensed" #tablaHTMLElement>
+            <thead>
+                <tr aria-rowindex="1">
+                    <th class="text-center blue-header-cell" rowspan="3" aria-colindex="1">Referencia</th>
+                    <th id="fecha" class="text-center green-header-cell" colspan="25" aria-colindex="2">Fecha</th>
+                </tr>
+                <tr>
+                    <th colspan="12" class="text-center green-header-cell group-1" aria-colindex="2">Detalle de la referencia</th>
+                    <th colspan="3" class="text-center orange-header-cell group-2" aria-colindex="3">Información del proveedor</th>
+                    <th colspan="4" class="text-center blue-header-cell group-3" aria-colindex="4">Información de Precios</th>
+                    <th colspan="6" class="text-center blue-header-cell group-4" aria-colindex="5">Información adicional de Costes</th>
+                </tr>
+                <tr>
+                    <th class="text-center green-header-cell group-1" aria-colindex="2">Descripción</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="3">Fabricante</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="4">Marca</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="5">Modelo</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="6">Fecha de Alta</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="7">Tamaño/Horma</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="8">Dibujo</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="9">Color</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="10">Unidades de compra</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="11">Unidades de venta</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="12">Año-Temporada Última Entrada</th>
+                    <th class="text-center green-header-cell group-1" aria-colindex="13">Calificación 2</th>
+                    <th class="text-center orange-header-cell group-2" aria-colindex="14">Proveedor</th>
+                    <th class="text-center orange-header-cell group-2" aria-colindex="15">Divisa</th>
+                    <th class="text-center orange-header-cell group-2" aria-colindex="16">País</th>
+
+                    <th class="text-center blue-header-cell group-3" aria-colindex="17"> Coste Tarifa</th>
+                    <th class="text-center blue-header-cell group-3" aria-colindex="18"> PVP Tarifa</th>
+                    <th class="text-center blue-header-cell group-3" aria-colindex="19"> PVP Vigente Permanente</th>
+                    <th class="text-center blue-header-cell group-3" aria-colindex="20"> PVP Vigente</th>
+
+                    <th class="text-center blue-header-cell group-4" aria-colindex="21"> Coste Neto</th>
+                    <th class="text-center blue-header-cell group-4" aria-colindex="22"> Coste Mercancía</th>
+                    <th class="text-center blue-header-cell group-4" aria-colindex="23"> Coste Valor de la Existencia</th>
+                    <th class="text-center blue-header-cell group-4" aria-colindex="24"> Precio Ultima Entrada Pedido</th>
+                    <th class="text-center blue-header-cell group-4" aria-colindex="25"> Nº Pedido (ultimo pedido entregado de esta referencia)</th>
+                    <th class="text-center blue-header-cell group-4" aria-colindex="26"> Fecha del Pedido</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr aria-rowindex="1">
+                    <td aria-colindex="1" data-title="Referencia: " headers="Referencia" class="text-left">61405395728605</td>
+                    <td aria-colindex="2" data-title="Descripción: " headers="Fecha / Detalle de la referencia / Descripción" class="text-right group-1">LED 50" 50PUS7304/12 4K HDR SM</td>
+                    <td aria-colindex="3" data-title="Fabricante" headers="Fecha / Detalle de la referencia / Fabricante" class="text-right group-1">126888</td>
+                    <td aria-colindex="4" data-title="Marca: " headers="Fecha / Detalle de la referencia / Marca" class="text-right group-1">Philips</td>
+                    <td aria-colindex="5" data-title="Modelo: " headers="Fecha / Detalle de la referencia / Modelo" class="text-right group-1">50PUS7304/12</td>
+                    <td aria-colindex="6" data-title="Fecha de alta: " headers="Fecha / Detalle de la referencia / Fechqa de Alta" class="text-right group-1">15/04/2019</td>
+                    <td aria-colindex="7" data-title="Tamaño Horna: " headers="Fecha / Detalle de la referencia / Tamaño/Horma" class="text-right group-1">1</td>
+                    <td aria-colindex="8" data-title="Dibujo: " headers="Fecha / Detalle de la referencia / Dibujo" class="text-right group-1">6</td>
+                    <td aria-colindex="9" data-title="Color: " headers="Fecha / Detalle de la referencia / Color" class="text-right group-1">Plata</td>
+                    <td aria-colindex="10" data-title="Unidades de compra: " headers="Fecha / Detalle de la referencia / Unidades de compra" class="text-right group-1">0001</td>
+                    <td aria-colindex="11" data-title="Unidades de venta" headers="Fecha / Detalle de la referencia / Unidades de venta" class="text-right group-1">0001</td>
+                    <td aria-colindex="12" data-title="Año-Temporada última entrada" headers="Fecha / Detalle de la referencia / Año-Temporada Última Entrada" class="text-right group-1">20F</td>
+                    <td aria-colindex="13" data-title="Calificación 2" headers="Fecha / Detalle de la referencia / Calificación 2" class="text-right group-1">O</td>
+                    <td aria-colindex="14" data-title="Proveedor: " headers="Fecha / Información del proveedor / Proveedor" class="text-right group-2">0126888</td>
+                    <td aria-colindex="15" data-title="Divisa: " headers="Fecha / Información del proveedor / Divisa" class="text-right group-2">PESETA CORRIENTE</td>
+                    <td aria-colindex="16" data-title="País: " headers="Fecha / Información del proveedor / País" class="text-right group-2">España</td>
+                    <td aria-colindex="17" data-title="Coste tarifa: " headers="Fecha / Información de Precios / Coste Tarifa" class="text-right group-3">436.1500</td>
+                    <td aria-colindex="18" data-title="PVP Tarifa: " headers="Fecha / Información de Precios / PVP Tarifa" class="text-right group-3">699.00</td>
+                    <td aria-colindex="19" data-title="PVP Vigente Permanente: " headers="Fecha / Información de Precios / PVP Vigente Permanente" class="text-right group-3">549.00</td>
+                    <td aria-colindex="20" data-title="PVP Vigente: " headers="Fecha / Información de Precios / PVP Vigente" class="text-right group-3">549.00</td>
+                    <td aria-colindex="21" data-title="Coste Neto: " headers="Fecha / Información adicional de Costes / Coste Neto" class="text-right group-4 ">436.1500</td>
+                    <td aria-colindex="22" data-title="Coste Mercancía: " headers="Fecha / Información adicional de Costes / Coste Mercancía" class="text-right group-4">436.1500</td>
+                    <td aria-colindex="23" data-title="Coste Valor de la Existencia: " headers="Fecha / Información adicional de Costes / Coste Valor de la Existencia" class="text-right group-4">437.8275</td>
+                    <td aria-colindex="24" data-title="Precio última entrada de pedido: " headers="Fecha / Información adicional de Costes / Precio Ultima Entrada Pedido" class="text-right group-4">639.00</td>
+                    <td aria-colindex="25" data-title="Nº Pedido: " headers="Fecha / Información adicional de Costes / Nº Pedido (ultimo pedido entregado de esta referencia)" class="text-right group-4">56892301</td>
+                    <td aria-colindex="26" data-title="Fecha del Pedido: " headers="Fecha / Información adicional de Costes / Fecha del Pedido" class="text-right group-4">09-09-2020</td>
+                </tr>
+
+                <tr aria-rowindex="2">
+                    <td aria-colindex="1" data-title="Referencia: " headers="Referencia" class="text-left">61387635317274</td>
+                    <td aria-colindex="2" data-title="Descripción: " headers="Fecha / Detalle de la referencia / Descripción" class="text-right group-1">LED 50" 50PUS7304/12 4K HDR SM</td>
+                    <td aria-colindex="3" data-title="Fabricante" headers="Fecha / Detalle de la referencia / Fabricante" class="text-right group-1">126888</td>
+                    <td aria-colindex="4" data-title="Marca: " headers="Fecha / Detalle de la referencia / Marca" class="text-right group-1">Philips</td>
+                    <td aria-colindex="5" data-title="Modelo: " headers="Fecha / Detalle de la referencia / Modelo" class="text-right group-1">50PUS7304/12</td>
+                    <td aria-colindex="6" data-title="Fecha de alta: " headers="Fecha / Detalle de la referencia / Fechqa de Alta" class="text-right group-1">15/04/2019</td>
+                    <td aria-colindex="7" data-title="Tamaño Horna: " headers="Fecha / Detalle de la referencia / Tamaño/Horma" class="text-right group-1">1</td>
+                    <td aria-colindex="8" data-title="Dibujo: " headers="Fecha / Detalle de la referencia / Dibujo" class="text-right group-1">6</td>
+                    <td aria-colindex="9" data-title="Color: " headers="Fecha / Detalle de la referencia / Color" class="text-right group-1">Plata</td>
+                    <td aria-colindex="10" data-title="Unidades de compra: " headers="Fecha / Detalle de la referencia / Unidades de compra" class="text-right group-1">0001</td>
+                    <td aria-colindex="11" data-title="Unidades de venta" headers="Fecha / Detalle de la referencia / Unidades de venta" class="text-right group-1">0001</td>
+                    <td aria-colindex="12" data-title="Año-Temporada última entrada" headers="Fecha / Detalle de la referencia / Año-Temporada Última Entrada" class="text-right group-1">20F</td>
+                    <td aria-colindex="13" data-title="Calificación 2" headers="Fecha / Detalle de la referencia / Calificación 2" class="text-right group-1">O</td>
+                    <td aria-colindex="14" data-title="Proveedor: " headers="Fecha / Información del proveedor / Proveedor" class="text-right group-2">0126888</td>
+                    <td aria-colindex="15" data-title="Divisa: " headers="Fecha / Información del proveedor / Divisa" class="text-right group-2">PESETA CORRIENTE</td>
+                    <td aria-colindex="16" data-title="País: " headers="Fecha / Información del proveedor / País" class="text-right group-2">España</td>
+                    <td aria-colindex="17" data-title="Coste tarifa: " headers="Fecha / Información de Precios / Coste Tarifa" class="text-right group-3">436.1500</td>
+                    <td aria-colindex="18" data-title="PVP Tarifa: " headers="Fecha / Información de Precios / PVP Tarifa" class="text-right group-3">699.00</td>
+                    <td aria-colindex="19" data-title="PVP Vigente Permanente: " headers="Fecha / Información de Precios / PVP Vigente Permanente" class="text-right group-3">549.00</td>
+                    <td aria-colindex="20" data-title="PVP Vigente: " headers="Fecha / Información de Precios / PVP Vigente" class="text-right group-3">549.00</td>
+                    <td aria-colindex="21" data-title="Coste Neto: " headers="Fecha / Información adicional de Costes / Coste Neto" class="text-right group-4">436.1500</td>
+                    <td aria-colindex="22" data-title="Coste Mercancía: " headers="Fecha / Información adicional de Costes / Coste Mercancía" class="text-right group-4">436.1500</td>
+                    <td aria-colindex="23" data-title="Coste Valor de la Existencia: " headers="Fecha / Información adicional de Costes / Coste Valor de la Existencia" class="text-right group-4">437.8275</td>
+                    <td aria-colindex="24" data-title="Precio última entrada de pedido: " headers="Fecha / Información adicional de Costes / Precio Ultima Entrada Pedido" class="text-right group-4">639.00</td>
+                    <td aria-colindex="25" data-title="Nº Pedido: " headers="Fecha / Información adicional de Costes / Nº Pedido (ultimo pedido entregado de esta referencia)" class="text-right group-4">56892301</td>
+                    <td aria-colindex="26" data-title="Fecha del Pedido: " headers="Fecha / Información adicional de Costes / Fecha del Pedido" class="text-right group-4">09-09-2020</td>
+                </tr>
+
+                <tr aria-rowindex="3">
+                    <td aria-colindex="1" data-title="Referencia: " headers="Referencia" class="text-left">6980397723176</td>
+                    <td aria-colindex="2" data-title="Descripción: " headers="Fecha / Detalle de la referencia / Descripción" class="text-right group-1">LED 50" 50PUS7304/12 4K HDR SM</td>
+                    <td aria-colindex="3" data-title="Fabricante" headers="Fecha / Detalle de la referencia / Fabricante" class="text-right group-1">126888</td>
+                    <td aria-colindex="4" data-title="Marca: " headers="Fecha / Detalle de la referencia / Marca" class="text-right group-1">Philips</td>
+                    <td aria-colindex="5" data-title="Modelo: " headers="Fecha / Detalle de la referencia / Modelo" class="text-right group-1">50PUS7304/12</td>
+                    <td aria-colindex="6" data-title="Fecha de alta: " headers="Fecha / Detalle de la referencia / Fechqa de Alta" class="text-right group-1">15/04/2019</td>
+                    <td aria-colindex="7" data-title="Tamaño Horna: " headers="Fecha / Detalle de la referencia / Tamaño/Horma" class="text-right group-1">1</td>
+                    <td aria-colindex="8" data-title="Dibujo: " headers="Fecha / Detalle de la referencia / Dibujo" class="text-right group-1">6</td>
+                    <td aria-colindex="9" data-title="Color: " headers="Fecha / Detalle de la referencia / Color" class="text-right group-1">Plata</td>
+                    <td aria-colindex="10" data-title="Unidades de compra: " headers="Fecha / Detalle de la referencia / Unidades de compra" class="text-right group-1">0001</td>
+                    <td aria-colindex="11" data-title="Unidades de venta" headers="Fecha / Detalle de la referencia / Unidades de venta" class="text-right group-1">0001</td>
+                    <td aria-colindex="12" data-title="Año-Temporada última entrada" headers="Fecha / Detalle de la referencia / Año-Temporada Última Entrada" class="text-right group-1">20F</td>
+                    <td aria-colindex="13" data-title="Calificación 2" headers="Fecha / Detalle de la referencia / Calificación 2" class="text-right group-1">O</td>
+                    <td aria-colindex="14" data-title="Proveedor: " headers="Fecha / Información del proveedor / Proveedor" class="text-right group-2">0126888</td>
+                    <td aria-colindex="15" data-title="Divisa: " headers="Fecha / Información del proveedor / Divisa" class="text-right group-2">PESETA CORRIENTE</td>
+                    <td aria-colindex="16" data-title="País: " headers="Fecha / Información del proveedor / País" class="text-right group-2">España</td>
+                    <td aria-colindex="17" data-title="Coste tarifa: " headers="Fecha / Información de Precios / Coste Tarifa" class="text-right group-3">436.1500</td>
+                    <td aria-colindex="18" data-title="PVP Tarifa: " headers="Fecha / Información de Precios / PVP Tarifa" class="text-right group-3">699.00</td>
+                    <td aria-colindex="19" data-title="PVP Vigente Permanente: " headers="Fecha / Información de Precios / PVP Vigente Permanente" class="text-right group-3">549.00</td>
+                    <td aria-colindex="20" data-title="PVP Vigente: " headers="Fecha / Información de Precios / PVP Vigente" class="text-right group-3">549.00</td>
+                    <td aria-colindex="21" data-title="Coste Neto: " headers="Fecha / Información adicional de Costes / Coste Neto" class="text-right group-4">436.1500</td>
+                    <td aria-colindex="22" data-title="Coste Mercancía: " headers="Fecha / Información adicional de Costes / Coste Mercancía" class="text-right group-4">436.1500</td>
+                    <td aria-colindex="23" data-title="Coste Valor de la Existencia: " headers="Fecha / Información adicional de Costes / Coste Valor de la Existencia" class="text-right group-4">437.8275</td>
+                    <td aria-colindex="24" data-title="Precio última entrada de pedido: " headers="Fecha / Información adicional de Costes / Precio Ultima Entrada Pedido" class="text-right group-4">639.00</td>
+                    <td aria-colindex="25" data-title="Nº Pedido: " headers="Fecha / Información adicional de Costes / Nº Pedido (ultimo pedido entregado de esta referencia)" class="text-right group-4">56892301</td>
+                    <td aria-colindex="26" data-title="Fecha del Pedido: " headers="Fecha / Información adicional de Costes / Fecha del Pedido" class="text-right group-4">09-09-2020</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>

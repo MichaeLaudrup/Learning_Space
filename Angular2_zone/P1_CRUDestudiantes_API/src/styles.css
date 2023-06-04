@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+:root{
+  --snack-color: #a1f09e;
+}
+
+h1 {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size:2vw !important;
+  }
+  h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 2em;
+    background-color: #8db7ee;
+  }
+
+  body, input[type="text"], button {
+    color: rgb(91, 39, 121);
+    font-family: Cambria, Georgia, serif;
+  }
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+html, body {
+   height: 100% !important; 
+   background-color: #8db7ee !important; }
+body {
+   margin: 0;
+   background-color: #8db7ee !important ;
+   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+footer{
+  text-align: center;
+  color:white; 
+  background-color:rgb(72, 97, 143) ;
+  padding-top:10px; 
+  width: 100%;
+  font-size: 1.3vw;
+  padding-bottom: 10px; 
+}
+
+snack-bar-container{
+  background-color: var(--snack-color) !important;
+  color:black !important; 
+  margin-bottom: 15% !important;
+}
+
+mat-dialog-container{
+  background-color: rgb(72, 97, 143) !important ;
+}
+

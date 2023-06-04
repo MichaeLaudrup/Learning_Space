@@ -1,0 +1,17 @@
+<div id="details-container">
+    <h1 mat-dialog-title>Student Details</h1>
+  <div mat-dialog-content *ngIf="student !== undefined">
+
+    <ul>
+      <li>
+        <span class="field_description">Id. </span><span>{{student.id}}</span> 
+      </li>
+      <li>
+        <span class="field_description">Name</span> <span >{{student.name}}</span> 
+      </li>
+      <li>
+        <span class="field_description">Email</span> <span >{{student.email}}</span> 
+      </li>
+    </ul>
+  </div>
+</div>

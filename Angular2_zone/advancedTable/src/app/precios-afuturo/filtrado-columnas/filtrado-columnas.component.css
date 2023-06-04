@@ -1,0 +1,24 @@
+.column-filter-container {
+    padding: 0 var(--lateral-app-padding);
+}
+
+.filter-row ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-row ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: black;
+    color: white;
+    padding: .3rem .75rem;
+    margin-top: 5px;
+}
+
+.columna-seleccionada {
+    background-color: red !important;
+}

@@ -1,0 +1,14 @@
+<hr>
+<label for="operando1" >Primer operando: </label>
+<input id="operando1" type="number" #operando1>
+
+<label for="operando2">Segundo operando: </label>
+<input id="operando2"  #operando2 type="number">
+<hr>
+<button id="btn-sumar" type="button" (click)="sumar()">Sumar</button>
+<button type="button">Restar</button>
+<button type="button">Multiplicar</button>
+<button type="button">Dividir</button>
+<hr>
+
+<div id="resultado" #resultado></div>

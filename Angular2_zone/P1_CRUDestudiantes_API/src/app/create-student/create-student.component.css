@@ -1,0 +1,29 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+#form-container{
+  margin-top: 5%;
+  color:white; 
+  display: grid;
+  justify-content: center;
+}
+
+form {
+  background-color: rgb(72, 97, 143); 
+  padding: 5%;
+  width:40vw;
+}
+
+button{
+  color:black; 
+}
+
+#spinerContainer{
+  margin-top: 10%;
+  display: grid;
+  justify-items: center;
+}
+
+
+
+
+

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <form class="col-6 p-5" [formGroup]="formulario" (ngSubmit)="procesarYEnviarForm()">
+            <div class="form-group">
+                <label for="project_name">Nombre de proyecto</label>
+                <input id="project_name" type="text" class="form-control" formControlName="project_name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="text" class="form-control" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for="project_status">Estado de proyecto</label>
+                <select id="project_status" class="form-control" formControlName="project_status">
+                    <option *ngFor="let state of status_array" value="state"> {{ state }}</option>
+                </select>
+            </div>
+            <button class="btn btn-primary mt-3" type="submit"> Subir</button>
+        </form>
+    </div>
+
+</div>

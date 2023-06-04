@@ -1,0 +1,29 @@
+:host {
+  height: 100vh;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.app-header, .app-footer{
+  height: 60px;
+  background-color: blueviolet;
+  color:white;
+}
+
+.app-header__list{
+  display:flex;
+  list-style: none;
+}
+
+.app-header__list-item{
+  padding: .5rem 1rem;
+}
+
+
+
+.dinamic-content{
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}

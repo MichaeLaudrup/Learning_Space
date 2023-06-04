@@ -1,0 +1,20 @@
+<p>directive-exercise works!</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="buttonClicked()">Display Details</button>
+            <p *ngIf="display">Secreta password: apolion </p>
+            <hr>
+            <ul>
+                <li 
+                    *ngFor="let number of clicks_log" 
+                    [ngStyle]="{'background-color': (number > 4) ? 'blue' : 'white'}" 
+                    [ngClass]="{'white-color': number > 4}">
+                    {{number}} 
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

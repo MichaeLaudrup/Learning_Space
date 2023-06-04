@@ -1,0 +1,153 @@
+/* ESTILOS GENERICOS DEL LAYOUT DEL FORM */
+
+.btn-black {
+    background-color: black;
+    color: white;
+    padding: .25rem .5rem;
+    border: none;
+}
+
+.form-container {
+    background-color: var(--color-principal);
+    font-family: "Open Sans", sans-serif;
+    padding: 2rem var(--lateral-app-padding);
+}
+
+input:hover,
+input:focus,
+.btn-black:hover,
+.btn-white:hover {
+    color: white;
+    background-color: black;
+    outline-offset: 2px;
+    outline: 1px solid black;
+}
+
+
+/* Una fila generica del formulario recibe estos estilos */
+
+.form-row {
+    margin: 0 auto;
+    display: flex;
+    padding: .75rem 0rem;
+}
+
+
+/* Estilos aplicables unicamente a la primera fila */
+
+.form-row:nth-child(1) {
+    justify-content: flex-end;
+    padding-bottom: 0;
+}
+
+
+/* Estilos aplicables unicamente a la segunda fila */
+
+.form-row:nth-child(2) {
+    justify-content: center;
+    padding-bottom: 0;
+    gap: 15px;
+}
+
+form .special-input-box {
+    flex-basis: 100%;
+}
+
+form .special-input-box legend,
+form .date-input label {
+    font-size: 1rem;
+    color: white;
+}
+
+
+/* Se estiliza un tipo especial de input que esta compuesto por codigo y descripcion */
+
+form .special-input-box input,
+.date-input input {
+    padding: .25rem;
+}
+
+form .special-input-box .code-input {
+    width: 15%;
+    margin-right: 5px;
+}
+
+form .special-input-box .txt-input {
+    width: calc(85% - 5px);
+}
+
+
+/* Estilos aplicables unicamente a la tercera fila */
+
+form .date-input label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+form .date-input input {
+    width: 70%;
+    height: 36px;
+}
+
+.form-row:nth-child(3) .fieldset-inner-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.fieldset-inner-row input {
+    width: 18%;
+}
+
+
+/* Estilos de la cuarta fila del form */
+
+.form-row:nth-child(4) {
+    justify-content: flex-end;
+}
+
+.btn-white {
+    padding: .25rem .5rem;
+    border: none;
+    margin-right: 10px;
+}
+
+
+/* Estilos aplicables dependiendo del estado del input */
+
+input {
+    border: 2px solid transparent;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+@media screen and (max-width:850px) {
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .form-row,
+    .fieldset-inner-row {
+        flex-direction: column;
+    }
+    .fieldset-inner-row input {
+        width: 100%;
+    }
+    form .date-input input {
+        width: 100%;
+        height: 36px;
+    }
+    .btn-white {
+        margin-bottom: 12px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:520px) {
+    form {
+        width: 100%;
+    }
+}

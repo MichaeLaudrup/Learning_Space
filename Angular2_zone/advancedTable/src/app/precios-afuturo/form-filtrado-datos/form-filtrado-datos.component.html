@@ -1,0 +1,48 @@
+<div class="form-container">
+    <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+        <div class="form-row">
+            <button class="btn-black">Importar desde excel</button>
+        </div>
+        <div class="form-row">
+            <fieldset class="special-input-box">
+                <legend>Centro</legend>
+                <input placeholder="001" name="codigoCentro" id="centro-code" class="code-input" type="text" ngModel>
+                <input name="textoCentro" id="centro-text" class="txt-input" type="text" ngModel>
+            </fieldset>
+            <fieldset class="special-input-box">
+                <legend>Ambito</legend>
+                <input placeholder="001" name="codigoAmbito" id="ambito-code" class="code-input" type="text" ngModel>
+                <input name="textoAmbito" id=" ambito-text " class="txt-input " type="text " ngModel>
+            </fieldset>
+            <fieldset class="special-input-box ">
+                <legend>Región</legend>
+                <input placeholder="001" name="codigoRegion" id="region-code " class="code-input " type="text " ngModel>
+                <input name="textoRegion" id="region-text " class="txt-input " type="text " ngModel>
+            </fieldset>
+        </div>
+
+        <div class="form-row ">
+            <div class="date-input ">
+                <label for=" ">Fecha</label>
+                <input name="fecha" type="text " ngModel>
+            </div>
+
+            <fieldset class="special-input-box ">
+                <legend>Mercancía</legend>
+                <div class="fieldset-inner-row " ngModelGroup="mercancia">
+                    <label for="uneco" style="display: none;">Código UNECO</label>
+                    <input id="uneco" name="uneco" type="text" placeholder="Uneco" ngModel email required>
+                    <input name="familia" type="text" placeholder="Familia" ngModel>
+                    <input name="fabricante" type="text" placeholder="Fabricante" ngModel>
+                    <input name="marca" type="text" placeholder="Marca" ngModel>
+                    <input name="barra" type="text" placeholder="Barra" ngModel>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="form-row ">
+            <button class="btn-white " (click)="resetForm()">Limpiar</button>
+            <button class="btn-black " type="submit" [disabled]="!myForm.valid">Filtrar</button>
+        </div>
+    </form>
+</div>

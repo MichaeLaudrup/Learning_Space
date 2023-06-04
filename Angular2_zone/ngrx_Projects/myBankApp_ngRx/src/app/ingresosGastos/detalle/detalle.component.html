@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Detalle de ingreso egreso</h4>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Tipo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let transaccion of transacciones | ordenarPorIngreso; let i = index" [ngClass]="{'bc-green':transaccion.tipo === 'ingreso', 'bc-red' :transaccion.tipo === 'gasto'}">
+                            <td><b>{{ transaccion.descripcion}}</b></td>
+                            <td>{{ transaccion.cantidad | currency}}</td>
+                            <td>{{ transaccion.tipo}}</td>
+                            <td>
+                                <button class="btn btn-danger" (click)="borrar(transaccion.uid)">
+                                    <i class="fa fa-trash"></i> Borrar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

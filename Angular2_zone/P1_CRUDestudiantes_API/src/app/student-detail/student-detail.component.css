@@ -1,0 +1,21 @@
+ h1{
+     font-size: 2em;
+     color: white;
+     text-align: center;
+ }
+
+ ul{
+    list-style-type: none;
+ }
+ li {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+     font-size: 2em;
+     margin-top: 5%;
+ }
+
+ .field_description{
+     justify-self: right;
+     margin-right: 10%;
+ }
+

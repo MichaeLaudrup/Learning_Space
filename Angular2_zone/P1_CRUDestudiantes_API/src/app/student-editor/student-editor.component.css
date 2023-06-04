@@ -1,0 +1,20 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+#form-container{
+  color:white; 
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+
+form {
+  background-color: rgb(72, 97, 143); 
+  padding: 5%;
+  width:40vw;
+}
+
+button{
+  color:black; 
+}
