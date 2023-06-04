@@ -1,0 +1,32 @@
+<h2 class="info-title">User information</h2>
+<div class="container" ng-init="myInfoCtrl.init()">
+    <span ng-if="!myInfoCtrl.userData">
+        Not Signed Up Yet. <a ui-sref="public.signup"><br class="hidden-xs"> Sign Up Now!!</a>
+    </span>
+
+    <div ng-if="myInfoCtrl.userData">
+        <ul>
+            <li>
+                Name: {{ myInfoCtrl.userData.name}}
+            </li>
+            <li>
+                Lastname: {{ myInfoCtrl.userData.lastname || 'Not specified'}}
+            </li>
+            <li>
+                email: {{ myInfoCtrl.userData.email }}
+            </li>
+            <li>
+                phone: {{ myInfoCtrl.userData.phone || 'Not specified' }}
+            </li>
+            <li>
+                favoriteMenuCode: {{ myInfoCtrl.userData.favoriteMenu}}
+            </li>
+        </ul>
+        <menu-item ng-if="myInfoCtrl.menuItemloaded" menu-item="myInfoCtrl.menuItemloaded"></menu-item>
+       
+        
+        
+       
+        
+    </div>
+</div>

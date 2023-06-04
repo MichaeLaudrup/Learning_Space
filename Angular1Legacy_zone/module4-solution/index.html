@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-header">
+                <li >
+                    <a ui-sref="home" ui-sref-active="active-link"> Home</a>
+                </li>
+                <li >
+                    <a ui-sref="categories" ui-sref-active="active-link"> Categories List</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <ui-view></ui-view>
+    </main>
+    <footer>
+        Author - Michael Laudrup Luis González
+    </footer>
+    <script  src="./js/lib/angular.min.js"></script>
+    <script src="./js/lib/angular-ui-router.min.js"></script>
+
+    <script src="./js/modules/data.module.js"></script>
+    <script src="./js/modules/menuapp.module.js"></script>
+    
+    <script src="./js/components/categories.component.js"></script>
+    <script src="./js/components/items.component.js"></script>
+    <script src="./js/controllers/categories.controller.js"></script>
+    <script src="./js/controllers/items.controller.js"></script>
+    <script src="./js/services/MenuDataService.js"></script>
+</body>
+</html>
