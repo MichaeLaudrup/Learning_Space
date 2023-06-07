@@ -8,6 +8,10 @@ En este espacio estan todos los proyectos estan asociados a formaciones de curso
      Angular2_zone: En este espacio se trabaja con proyectos asociados al stack Angular2+, que está compuesto por otras tecnologías más
      nativas como HTML5, CSS3, TypeScript, preprocesador Sass o ngRx, así como visión superficial al testing.
   </li>
+  <li>
+      <b>My wiki:</b> En este directorio aglutino todos los apuntes e información que voy obteniendo de todas mis formaciones, siguiendo un formato
+      y esquema de representación de la información para luego inyectarla en la aplicación "Alejandría".
+  </li>
    <li><b>Pure front-end zone:</b> Tal y como indica su nombre en este espacio se trata con tecnologías front-end puras, es decir, las más nativas,   HTML, CSS3, JavaScript sin estar aderezadas de frameworks o librerías, salvo
     la librería de estilo Bootstrap. <a href="./PureFrontEnd_zone">Click para ver proyectos.</a>
   </li>
