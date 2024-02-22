@@ -1,0 +1,12 @@
+WITH Ada.Text_IO; USE Ada.Text_IO;
+
+PROCEDURE Main IS
+   fechaIntroducida: String(1:8);
+BEGIN
+   Put("Introduzca fecha en formato DD/MM/AA: ");
+   Get(FechaIntroducida);
+
+
+END Main;
+
+

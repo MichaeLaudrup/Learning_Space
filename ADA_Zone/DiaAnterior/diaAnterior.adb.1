@@ -1,0 +1,22 @@
+WITH Ada.Text_IO; USE Ada.Text_IO;
+
+PROCEDURE diaAnterior IS
+   FechaIntroducida: String(1..8);
+   dia, mes, annio: Integer;
+BEGIN
+   Put("Introduzca fecha en formato DD/MM/AA: ");
+   Get(FechaIntroducida);
+   Dia := Integer'Value(FechaIntroducida(1..2));
+   Mes := Integer'Value(FechaIntroducida(4..5));
+   Annio := Integer'Value(FechaIntroducida(7..8));
+
+   CASE Mes IS
+      when 1 | 3 | 5 | 7 | 8 |
+
+
+
+
+END DiaAnterior;
+
+
+

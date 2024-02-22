@@ -1,0 +1,40 @@
+<div class="description-1">
+  <h2>About the project</h2>
+  <p>
+    This project is designed for obtaining the intermediate level certificate of Angular. It consists of a simple Quiz
+    game where we can select category and difficulty level.
+    More detailed guidelines can be found by <a
+      href="https://docs.google.com/document/d/1DRcEpTmDxDQWsTsPFapSNubUCYFr9Fxxn34jLXw73fE/edit">clicking here</a>.
+  </p>
+</div>
+
+<div class="description-2">
+  <h2>Architectural decisions</h2>
+  <ul>
+    <li>Although the application is very small, it has been decided to implement a scalable and extensible architecture
+      by separating each part of the application into modules and loading each of these modules lazily.</li>
+    <li>The shared directory contains components, interfaces, pipes, utilities, etc., that are potentially reusable in
+      future modules. However, it should be noted that if certain elements are only used in a single module, they should
+      not be inserted in the shared module. For example, the interfaces could have been declared within the "quiz-maker"
+      module since we don't know in advance if they will be used in other modules.</li>
+    <li>The same applies to the service that calls the API to get quiz categories and questions. In this case, it has
+      been placed inside "core," but in reality, if it is not used in more than one module, it should only be inside the
+      "quiz-maker" module. The purpose of declaring it in "core" is to demonstrate a common organization in Angular2+
+      projects.</li>
+  </ul>
+</div>
+
+<div class="description">
+  <h2>Other aspects</h2>
+  <ul>
+    <li>Tests have not been implemented since they were not requested in the practice specification.</li>
+    <li>All design decisions have been made by the developer without using third-party styling libraries, using only
+      SCSS.</li>
+    <li>In other projects, Es-Lint is usually installed to ensure code formatting consistency among different
+      developers. In this case, it has been omitted as its need was not specified. Another tool that could have been
+      used is Husky to run tests or run Es-Lint before uploading anything to an online repository or committing changes
+      in git.</li>
+    <li>It was understood from the prompt that the type and number of questions requested from the API are static, so
+      they have been set accordingly.</li>
+  </ul>
+</div>

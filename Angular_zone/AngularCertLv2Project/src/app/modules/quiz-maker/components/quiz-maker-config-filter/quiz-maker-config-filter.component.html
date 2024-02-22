@@ -1,0 +1,20 @@
+<form [formGroup]="quizQueryForm" (ngSubmit)="processQuizRequest()" >
+  <div class="form-field">
+    <label for="caregory">Category:</label>
+    <select formControlName="category" name="caregory" id="categorySelect">
+      <option value="">Select a category</option>
+      <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="difficutly">Difficulty:</label>
+    <select formControlName="difficulty" name="difficutly" id="difficultySelect">
+      <option value="">Select difficulty</option>
+      <option *ngFor="let difficulty of difficulties" [value]="difficulty">
+        {{ difficulty }}
+      </option>
+    </select>
+  </div>
+  <button class="generic-btn" type="submit" id="createBtn" [disabled]="quizQueryForm.invalid">Create</button>
+</form>

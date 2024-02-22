@@ -1,0 +1,65 @@
+WITH Ada.Text_IO; USE Ada.Text_IO;
+WITH ADA.Integer_Text_IO; USE Ada.Integer_Text_IO;
+
+PROCEDURE Once IS
+   --Este programa lee dos numeros enteros, comprueba que son de cuatro digitos y devuelve
+   -- un determinado premio dependiendo del resultado de comparar los dos numeros enteros
+   --Los cupones no pueden tener como primera cifra el numero cero
+   Cupon_1, Cupon_2: Integer;
+   premio: integer;
+   FUNCTION CuponesSonValidos (Cup_1: IN Integer; Cup_2: IN Integer) RETURN Boolean IS
+   --Especificacion:
+   --Entrada: dos numeros enteros
+   --Pre: Cup_1 y Cup_2 mayor que cero.
+   --Salida: cierto si (Cup_1 > 999 && Cup_1 < 10000) && (Cup_2 > 999 && Cup_2 < 10000)
+   cuponValido: boolean;
+   BEGIN
+      cuponValido := false; -- Se parte de la premisa de que va a ser falso que los cupones son validos
+      IF((Cup_1 > 999) AND (Cup_1 < 10000)) THEN
+         IF((Cup_2>999) AND (Cup_2 < 10000)) THEN
+            cuponValido := true; --Solo si se cumplen las dos anteriores condiciones podemos afirmar que son validos
+            end if;
+      END IF;
+      return cuponValido;
+   END CuponesSonValidos;
+
+   PROCEDURE ObtenerPremio (Cupon1: IN Integer; Cupon2: IN Integer; Premio: OUT Integer) IS
+      --Especificacion
+      --Entradas: Dos numeros enteros representativos de dos cupones de 4 cifras, y el premio.
+      --Pre: Los dos numeros deben tener un total de cuatro cifras
+      --Post: Premio sera igual a 100000, 50000, 3 o 0
+      Cup1, Cup2: Integer;  --Variables auxiliares con las que se obtendran las dos ultimas cifras del cupon
+
+   BEGIN
+      IF(Cupon1 = Cupon2) THEN
+         Premio := 100000;
+      ELSIF((Cupon1 mod 1000) = (Cupon2  mod 1000)) THEN
+            premio := 50000;
+      ELSE
+         Cup1 := Cupon1;
+         Cup2 := Cupon2;
+         Cup1 := (Cup1 mod 1000); --Se elimina matematicamente la primera cifra de la derecha del cupon
+         Cup1 := (Cup1 mod 100); --Se elimina matematicamente la segunda cifra de la derecha del cupon 1
+         Cup2 := (Cup2 mod 1000);
+         Cup2 := (Cup2 mod 100);
+         IF(Cup1 = Cup2) THEN
+            premio := 3;
+         ELSE
+            premio := 0;
+         END IF;
+      END IF;
+   END ObtenerPremio;
+BEGIN
+   Put("Introduce primer cupon: ");
+   get(cupon_1);
+   Put("Introduce segundo cupon: ");
+   Get(Cupon_2);
+   IF(CuponesSonValidos(cupon_1, cupon_2)) THEN
+      Put("Los cupones introducidos son validos");
+      ObtenerPremio(Cupon_1, Cupon_2, Premio);
+      Put("Su premio es de: ");
+      put(premio);
+   ELSE
+      Put("Alguno de los dos cupones introducidos no tienen 4 digitos");
+   END IF;
+   end once;

@@ -1,0 +1,29 @@
+:host {
+  position: fixed;
+  width: 100%;
+  height: var(--header-nav-height);
+  top: 0;
+  left: 0;
+  background-color: var(--dark-bg-shallowest);
+}
+
+ul {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+
+  a {
+    transition: all .7s ease-in-out;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:white;
+    padding: 0rem 1rem;
+    height: var(--header-nav-height);
+  }
+}
+
+a:hover , .active {
+  color: var(--dark-bg-shallowest) !important;
+  background-color: var(--main-color);
+}

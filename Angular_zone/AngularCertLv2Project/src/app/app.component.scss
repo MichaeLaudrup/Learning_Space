@@ -1,0 +1,14 @@
+:host {
+  padding: 2rem;
+  color:white; 
+  display: block;
+  background-color: var(--dark-bg-deepest);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.content {
+  padding-top: var(--header-nav-height);
+  padding-bottom: var(--footer-height);
+}

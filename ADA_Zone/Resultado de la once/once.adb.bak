@@ -1,0 +1,3 @@
+WITH Ada.Text_IO; USE Ada.Text_IO;
+WITH ADA.Integer_Text_IO; USE: Ada.Integer_Text_IO;
+

@@ -1,0 +1,17 @@
+<h1>Results</h1>
+<div class="questions-with-answers-container">
+  <ng-container *ngFor="let questionWithAnswer of questionsWithAnswersChosen">
+    <app-quiz-question
+      [questionData]="questionWithAnswer"
+      [resultsMode]="true"
+    ></app-quiz-question>
+  </ng-container>
+</div>
+<p class="result-score" [ngClass]="{'loser': score < 2, 'tiebreaker': score >= 2 && score <= 3, 'winner': score > 3}">
+  <span>You score </span><span class="number">{{ score}}</span> out of <span class="number">{{ questionsWithAnswersChosen.length }}</span>
+</p>
+<div class="btn-line" >
+  <button class="generic-btn" type="button" routerLink="/questions">
+    Create a new quiz
+  </button>
+</div>

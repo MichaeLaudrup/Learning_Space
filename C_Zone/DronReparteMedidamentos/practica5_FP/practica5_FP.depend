@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1610538438 source:c:\users\maike\desktop\pec5_cecilio\practica5_fp\calendariotad.cpp
+	"calendarioTAD.h"
+
+1610538414 c:\users\maike\desktop\pec5_cecilio\practica5_fp\calendariotad.h
+	<stdio.h>
+	<stdlib.h>
+
+1610832688 source:c:\users\maike\desktop\pec5_cecilio\practica5_fp\practica5_fp.cpp
+	"FarmaDronTAD.h"
+	<stdio.h>
+	<stdlib.h>
+
+1610831576 c:\users\maike\desktop\pec5_cecilio\practica5_fp\farmadrontad.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"calendarioTAD.h"
+
+1610832474 source:c:\users\maike\desktop\pec5_cecilio\practica5_fp\farmadrontad.cpp
+	"FarmaDronTAD.h"
+

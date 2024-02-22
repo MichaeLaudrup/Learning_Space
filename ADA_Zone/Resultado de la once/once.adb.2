@@ -1,0 +1,43 @@
+WITH Ada.Text_IO; USE Ada.Text_IO;
+WITH ADA.Integer_Text_IO; USE Ada.Integer_Text_IO;
+
+PROCEDURE Once IS
+   --Este programa lee dos numeros enteros, comprueba que son de cuatro digitos y devuelve
+   -- un determinado premio dependiendo del resultado de comparar los dos numeros enteros
+   Cupon_1, Cupon_2: Integer;
+
+   FUNCTION CuponesSonValidos (Cup_1: IN Integer; Cup_2: IN Integer) RETURN Boolean IS
+   --Especificacion:
+   --Entrada: dos numeros enteros
+   --Pre: Cup_1 y Cup_2 mayor que cero.
+   --Salida: cierto si (Cup_1 > 999 && Cup_1 < 10000) && (Cup_2 > 999 && Cup_2 < 10000)
+   cuponValido: boolean;
+   BEGIN
+      cuponValido := false; -- Se parte de la premisa de que va a ser falso que los cupones son validos
+      IF((Cup_1 > 999) AND (Cup_1 < 10000)) THEN
+         IF((Cup_2>999) AND (Cup_2 < 10000)) THEN
+            cuponValido := true; --Solo si se cumplen las dos anteriores condiciones podemos afirmar que son validos
+            end if;
+      END IF;
+      return cuponValido;
+   END CuponesSonValidos;
+
+
+
+
+BEGIN
+   Put("Introduce primer cupon: ");
+   get(cupon_1);
+   Put("Introduce segundo cupon: ");
+   Get(Cupon_2);
+   IF(CuponesSonValidos) THEN
+      null;
+   ELSE
+      Put("Alguno de los dos cupones introducidos no tienen 4 digitos");
+   END IF;
+
+
+
+
+
+   end once;

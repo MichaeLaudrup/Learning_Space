@@ -1,0 +1,78 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatwu
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+
+U descomposicion_monedasuk%b  descomposicion_monedasuk.adb  2e4604fb NE OO SU KU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+Z ada.text_io.integer_io%s
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiinau.ads		20200819050644 8114c8e4 ada.text_io.integer_aux%s
+D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
+D a-tiinio.adb		20200819050644 df9cd7af ada.text_io.integer_io%b
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D descomposicion_monedasuk.adb  20200923095634 0ff4cc63 descomposicion_monedasuk%b
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D text_io.ads		20200819050648 21b2c898 text_io%s
+G a e
+G c Z b b [descomposicion_monedasuk standard 9 11 none]
+X 6 a-textio.ads
+264U14*New_Line 11|33s12 36s12 39s12 42s12
+465U14*Put 11|25s12 31s12 34s12 37s12 40s12
+X 8 a-tiinio.ads
+46k21*Integer_IO 108e27 11|10r38
+59U14 Get 11|26s15[10]
+80U14 Put 11|32s15[10] 35s15[10] 38s15[10] 41s15[10]
+X 11 descomposicion_monedasuk.adb
+9U11*Descomposicion_MonedasUK 9b11 44l5 44t29
+10K12 Integer_IO[8|46] 26r4 32r4 35r4 38r4 41r4
+11i4 Cantidad_Inicial{integer} 26m19 28r30
+12i4 qr{integer} 28m48 32r19
+12i7 st{integer} 28m51 35r19
+12i10 lib{integer} 28m54 38r19
+12i14 oz{integer} 28m58 41r19
+14U14 SubprogramaDescomposicion 14b14 14>40 14<69 14<90 14<111 14<129 22l8
+. 22t33 28s4
+14i40 cantidadEnOnzas{integer} 16r14 17r16
+14i69 quarte{integer} 20m7
+14i90 stones{integer} 18m7 20r17 21m7 21r17
+14i111 lib{integer} 16m7 18r16 19m7 19r14
+14i129 onzas{integer} 17m7
+X 27 text_io.ads
+24K9*Text_IO=24:29 11|4w6 10r30 25r4 31r4 33r4 34r4 36r4 37r4 39r4 40r4 42r4
+

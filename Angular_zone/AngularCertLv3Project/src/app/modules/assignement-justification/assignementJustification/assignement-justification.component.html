@@ -1,0 +1,32 @@
+<h1>Assignment Justifications</h1>
+<h2>General Considerations</h2>
+<ul>
+    <li>A notification system has been implemented to alert users of errors (such as attempts to insert duplicates or input an invalid zip code) and to notify when the cache system is updated.</li>
+    <li>Key configuration details, like API URLs, have been moved to environment settings. This strategy avoids hardcoding these values within the service, enhancing both security and maintainability.</li>
+    <li>The cache system's duration is now configurable via environment variables, offering flexibility in cache control and simplifying testing processes.</li>
+    <li>The application has undergone a restructuring into modules. Presently, it includes one module, but this design is optimized for future expansion and easier maintenance. The routing system has also been improved to load the weather module on demand (lazy loading), enhancing initial load times and overall performance. Additionally, this restructuring has resulted in a cleaner and more streamlined App module.</li>
+    <li>Lazy-loading has been introduced in anticipation of future application growth, ensuring efficient loading and optimized performance.</li>
+    <li>New components such as a header, footer, and modal notification system have been added in order to make more aesthetic presentation.</li>
+</ul>
+<h2>Step #1: Reactive Location Service</h2>
+<ul>
+    <li>
+        A reactive location service is now in place, offering enhanced reusability. This service enables various components to subscribe to and react to changes in user-selected locations. While the location data source originates from a Subject, it is shared as an Observable to prevent external entities from misusing the Subject's bidirectional capabilities.
+    </li>
+</ul>
+<h2>Step #2: Reusable Navigation System with Tabs</h2>
+<ul>
+    <li>
+        The tab navigation component, designed for versatility, is located in shared/components/tabs-navigator. It works by requiring a list of items with corresponding labels and links. The component not only displays these tabs but also communicates user interactions to the parent component, which then executes context-specific logic. Making it very reusable
+    </li>
+    <li>A card representational component has been created, That is, it has been decoupled from the use of services and the component is limited to displaying information.</li>
+</ul>
+<h2>Step #3: Caching System</h2>
+<ul>
+    <li>
+        The caching system is universally applicable across different components or services. It is thoroughly documented in the code for ease of understanding and operates independently, ensuring seamless integration in future applications.
+    </li>
+    <li>
+        Cache management flexibility is enhanced by allowing the specification of cache check intervals in the environment variables.
+    </li>
+</ul>

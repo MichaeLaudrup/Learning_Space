@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="FarmaDronTAD.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="36054" topLine="30" />
+	</File>
+	<File name="FarmaDronTAD.h" open="1" top="0" tabpos="2">
+		<Cursor position="1689" topLine="59" />
+	</File>
+	<File name="calendarioTAD.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="862" topLine="15" />
+	</File>
+	<File name="calendarioTAD.h" open="0" top="0" tabpos="0">
+		<Cursor position="571" topLine="0" />
+	</File>
+	<File name="practica5_FP.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="1863" topLine="20" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,16 @@
+WITH Ada.Text_IO; USE Ada.Text_IO;
+WITH Ada.Text_IO; USE Ada.Text_IO;
+
+PROCEDURE RestarSegundo IS
+   horaLeida: String;
+   Horas, Minutos, Segundos:Integer;
+
+
+BEGIN
+   Put("Introduzca hora con el siguiente formato (HH:MM:SS): ");
+   Get(HoraLeida);
+   Horas := integer(HoraLeida(1..2));
+   Minutos := integer(HoraLeida(4:5));
+   Segundos := integer(HoraLeida(7:8));
+END RestarSegundo;
+

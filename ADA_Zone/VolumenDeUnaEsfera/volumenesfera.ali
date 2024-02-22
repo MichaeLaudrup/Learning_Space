@@ -1,0 +1,76 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatwu
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+
+U volumenesfera%b	volumenesfera.adb	557911d8 NE OO SU KU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.float_aux%s  a-tiflau.adb		a-tiflau.ali
+Z ada.text_io.float_io%s
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiflau.ads		20200819050644 c0393f21 ada.text_io.float_aux%s
+D a-tiflio.ads		20200819050644 bf196650 ada.text_io.float_io%s
+D a-tiflio.adb		20200819050644 fd9b1cfc ada.text_io.float_io%b
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-fatflt.ads		20200819050646 11beb392 system.fat_flt%s
+D s-fatgen.ads		20200819050646 49cbaf86 system.fat_gen%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D text_io.ads		20200819050648 21b2c898 text_io%s
+D volumenesfera.adb	20200923091848 74cbd940 volumenesfera%b
+G a e
+G c Z b b [volumenesfera standard 3 11 none]
+X 6 a-textio.ads
+508U14*Put_Line 29|17s15
+X 8 a-tiflio.ads
+46k21*Float_IO 112e25 29|9r36
+60U14 Get 29|18s16[9]
+82U14 Put 29|21s16[9]
+X 28 text_io.ads
+24K9*Text_IO=24:29 29|2w6 9r28 17r7
+X 29 volumenesfera.adb
+3U11*VolumenEsfera 3b11 22l5 22t18
+4f4 Pi{float} 13r30
+5f4 radio{float} 18m20 19r18 20r43
+6f4 AreaResultante{float} 19m24 20r25
+7f4 ResultadoFinal{float} 20m7 21r20
+9K12 Float_IO[8|46] 18r7 21r7
+11U14 AreaEsfera 11b14 11>26 11<43 14l8 14t18 19s7
+11f26 Radio{float} 13r36 13r44
+11f43 areaResultante{float} 13m7
+
